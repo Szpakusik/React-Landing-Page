@@ -3,7 +3,7 @@
 Simple website for the wedding planner - Magda Stachurska. 
 
 My first application in React. It's finished, but I am still waiting for text to replace 'Lorem ipsum'.
-Moreover I have created API that allows to use nodemailer with contact forms.
+Moreover I have created an API that allows to use nodemailer with contact forms.
 
 You are able to see it at: 
 https://antykstyl.usermd.net/index

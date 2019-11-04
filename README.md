@@ -8,12 +8,6 @@ Moreover I have created an API that allows to use nodemailer with contact forms.
 You are able to see it at: 
 https://antykstyl.usermd.net/index
 
-## Installing
-```
-$ cd wedding-view
-$ npm start
-```
-
 ## Built With
 
 * [React.js](https://pl.reactjs.org/docs/getting-started.html) - JavaScript Library

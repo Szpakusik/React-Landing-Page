@@ -71,10 +71,10 @@ function AboutMe() {
             <Row className='w-100'>
               <Col className="ml-auto mr-auto text-center font-weight-normal" md="6" >
                 <p>
-                  An artist of considerable range, Jane Faker — the name taken by
-                  Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                  and records all of his own music, giving it a warm, intimate
-                  feel with a solid groove structure.
+                  Planowanie i aranżowanie od zawsze sprawiało mi ogromną przyjemność, dlatego postanowiłam
+                  przekuć swoją pasję w zawód, podejmując studia kierunkowe, a także zdobywając certyfikat
+                  Konsultanta Ślubnego. Świeże spojrzenie oraz znajomość branżowych trendów sprawi, że sprostam
+                  waszym najśmielszym oczekiwaniom i nienagannie wywiążę się z powierzonych mi zadań.
                 </p>
               </Col>
             </Row>
@@ -131,19 +131,22 @@ function AboutMe() {
                   </div>
                 </div>
             </Col>
-            <p className=' font-weight-normal w-100'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Eaque, quia! Distinctio maiores quis recusandae. 
-              
+            <p className=' font-weight-normal w-100'>
+              Cechuje mnie świetna organizacja pracy, oraz punktualność. Posiadam wysoko rozwinięte
+              umiejętności interpersonalne, należytą kreatywność i odpowiednie kompetencje. Jestem osoba
+              godną zaufania i konsekwentną. Najważniejsi dla mnie są moi klienci, których zdanie i sugestie cenię
+              sobie najbardziej.
             </p>
-            <p className=' font-weight-normal'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Eaque, quia! Distinctio maiores quis recusandae. 
-              Quasi molestias dicta, doloremque eveniet veritatis,
-               porro qui, distinctio facilis impedit explicabo alias esse obcaecati dolores!
+            <p className=' font-weight-normal'> 
+              Angażując mnie w przygotowania, mogę zagwarantować fachowe wsparcie w organizacji
+              i koordynacji uroczystości, sprawdzonych podwykonawców, cenionych na rynku ślubnym oraz
+              odciążenie w stresujących sytuacjach, nie pozwalających w pełni cieszyć się wielkim dniem.
             </p>
-            <p className=' font-weight-normal'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-             
-              Quasi molestias dicta, doloremque eveniet veritatis,
-               porro qui, distinctio facilis impedit explicabo alias esse obcaecati dolores!
+            <p className=' font-weight-bold w-100'> 
+              Każdą parę traktuję indywidualnie i taka też jest wycena mojej usługi.
+            </p>
+            <p className=' font-weight-normal w-100'>
+              W razie dalszych pytań zapraszam do kontaktu osobistego lub przez portale społecznościowe.
             </p>
           </Row>
           <Row className='w-100 mx-auto mt-5 overflow-hidden' style={{maxHeight:'500px'}}>

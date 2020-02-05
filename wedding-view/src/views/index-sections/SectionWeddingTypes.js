@@ -22,31 +22,7 @@ return(
         <div className="section section-dark text-center pt-4">
             <h2 className="title">Realizowane typy ślubów</h2>
             <Row className='w-100 mx-auto'>
-              <Col md="4">
-                <Card className="card-profile card-plain">
-                  <div className="card-avatar" style={imgStyle}>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        src={require("assets/img/wyznaniowy2.png")}
-                      />
-                    </a>
-                  </div>
-                  <CardBody>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <div className="author">
-                        <CardTitle tag="h4" className='sec-colour'>Wyznaniowy</CardTitle>
-                      </div>
-                    </a>
-                    <p className="card-description text-center">
-                      Teamwork is so important that it is virtually impossible
-                      for you to reach the heights of your capabilities or make
-                      the money that you want without becoming very good at it.
-                    </p>
-                  </CardBody>
-                  
-                </Card>
-              </Col>
+              
               <Col md="4">
                 <Card className="card-profile card-plain">
                   <div className="card-avatar" style={imgStyle}>
@@ -94,6 +70,31 @@ return(
                       strength of each member is the team. If you can laugh
                       together, you can work together, silence isn’t golden,
                       it’s deadly.
+                    </p>
+                  </CardBody>
+                  
+                </Card>
+              </Col>
+              <Col md="4">
+                <Card className="card-profile card-plain">
+                  <div className="card-avatar" style={imgStyle}>
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <img
+                        alt="..."
+                        src={require("assets/img/wyznaniowy2.png")}
+                      />
+                    </a>
+                  </div>
+                  <CardBody>
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <div className="author">
+                        <CardTitle tag="h4" className='sec-colour'>Wyznaniowy</CardTitle>
+                      </div>
+                    </a>
+                    <p className="card-description text-center">
+                      Teamwork is so important that it is virtually impossible
+                      for you to reach the heights of your capabilities or make
+                      the money that you want without becoming very good at it.
                     </p>
                   </CardBody>
                   

@@ -23,22 +23,10 @@ import { Button, Container } from "reactstrap";
 
 // core components
 
-function LandingPageHeader() {
+function LandingPageHeader({exeScroll,myRefe}) {
   let pageHeader = React.createRef();
-
-  // React.useEffect(() => {
-  //   if (window.innerWidth < 991) {
-  //     const updateScroll = () => {
-  //       let windowScrollTop = window.pageYOffset / 3;
-  //       pageHeader.current.style.transform =
-  //         "translate3d(0," + windowScrollTop + "px,0)";
-  //     };
-  //     window.addEventListener("scroll", updateScroll);
-  //     return function cleanup() {
-  //       window.removeEventListener("scroll", updateScroll);
-  //     };
-  //   }
-  // });
+  const handleClick = (e)=>{ exeScroll(myRefe) }
+ 
 
   return (
     <>
@@ -54,22 +42,20 @@ function LandingPageHeader() {
         <Container>
           <div className="motto text-center inherit2" style={{marginTop:"135px", marginBottom:"115px",}}>
 
-            <h1>Magda Stachurska Weddign Planner</h1>
+            <h2>Magdalena Stachurska Wedding Planner</h2>
             
             <h3>Uczynię ten dzień, najlepszym w waszym zyciu!</h3>
             <br />
             <Button
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-              className="btn-round mr-1"
+              className="btn-round mr-1 mt-3 "
               color="neutral"
               target="_blank"
               outline
+              onClick={handleClick}
+              style={{textTransform: 'none', letterSpacing: '2px'}}
             >
-              <i className="fa fa-play" />
-              Watch video
-            </Button>
-            <Button className="btn-round" color="neutral" type="button" outline>
-              Download
+              <i class="fa fa-chevron-circle-down"></i>
+              Kim jestem?
             </Button>
           </div>
         </Container>

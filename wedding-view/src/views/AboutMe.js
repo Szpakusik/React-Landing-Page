@@ -154,7 +154,7 @@ function AboutMe() {
             <img
                 alt="Magdalena Stachurska Planowanie wesel"
                 className="img-no-padding border mx-auto px-0"
-                src={require("assets/img/sharp.jpg")}
+                src={require("assets/img/sharp3.jpg")}
                 style={{width: '100%'}}
               />  
             </Col>

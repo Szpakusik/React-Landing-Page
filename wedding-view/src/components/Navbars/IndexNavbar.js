@@ -80,8 +80,8 @@ function IndexNavbar({exeScroll,myRefe}) {
       <Container>
       <a href="/">
            <div className="logo-container">
-                <div className="logo border-0 rounded-0" style={{width:"235px"}}>
-                    <img src={require("assets/img/LOGO2.png")} alt="Magda Stachurska Logo" style={{width:"235px"}} />
+                <div className="logo border-0 rounded-0" style={{width:"335px"}}>
+                    <img src={require("assets/img/LOGO2.png")} alt="Magda Stachurska Logo" style={{width:"335px"}} />
                 </div>
 
             </div>

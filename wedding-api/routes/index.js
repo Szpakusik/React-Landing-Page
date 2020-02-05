@@ -21,15 +21,20 @@ transporter.verify((error, success) => {
   }
 });
 
+// Basic info from extended form
 router.post('/send', (req, res, next) => {
 
-  const bride = req.body.bride;
-  const groom = req.body.groom;
-  const phone = req.body.phone;
-  const email = req.body.email;
+  const brideFirstName = req.body.brideFirstName;
+  const brideLastName = req.body.brideLastName;
+  const groomFirstName = req.body.groomFirstName;
+  const groomLastName = req.body.groomLastName;
+  const phone1 = req.body.phone1;
+  const email1 = req.body.email1;
+  const phone2 = req.body.phone2;
+  const email2 = req.body.email2;
   const budget = req.body.budget;
 
-  var content = ` Panna Młoda: ${bride} \nPan Młody: ${groom} \nNumer: ${phone} \nEmail: ${email} \nBudżet: ${budget} `
+  var content = ` Panna Młoda: ${brideFirstName} ${brideLastName} \nPan Młody: ${groomFirstName} ${groomLastName} \nNumer Panny Młodej: ${phone1} \nEmail Panny Młodej: ${email1} \nNumer Pana Młodego: ${phone2} \nEmail Pana Młodego: ${email2} \nBudżet: ${budget} `
 
   var mail = {
     from: `${bride} i ${groom}`,
@@ -50,6 +55,7 @@ router.post('/send', (req, res, next) => {
     }
   })
 })
+// Advanced info from extended form
 router.post('/send2', (req, res, next) => {
   const bride = req.body.bride;
   const groom = req.body.groom;
@@ -88,5 +94,32 @@ router.post('/send2', (req, res, next) => {
     }
   })
 })
+// Advanced info from extended form
+router.post('/send3', (req, res, next) => {
 
+  const name= req.body.name;   
+  const email= req.body.email;  
+  const message= req.body.message;
+
+  var content = ` Imię i nazwisko: ${name} \nEmail: ${email} \nWiadomość:\n ${message}`
+
+  var mail = {
+    from: `${name}`,
+    to: 'szpakusik@gmail.com',  //Change to email address that you want to receive messages on
+    subject: `Wiadomość z formularza od ${name}`,
+    text: content,
+  }
+
+  transporter.sendMail(mail, (err, data) => {
+    if (err) {
+      res.json({
+        msg: 'fail'
+      })
+    } else {
+      res.json({
+        msg: 'success'
+      })
+    }
+  })
+})
 module.exports = router;

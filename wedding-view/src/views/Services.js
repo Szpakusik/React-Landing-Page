@@ -77,23 +77,29 @@ function Services() {
 
               <p className="title font-weight-normal py-4 w-75 mx-auto h2" style={h2Style}>Oferta</p>
               <Col md="5" className='text-left px-0'>
-                <img style={{width: "100%", left:'0', marginTop:'-24px'}} className="img-responsive border-right"
-                 alt="Magdalena Stachurska" src={require("assets/img/eyeC.jpg")} />
+                <img style={{width: "100%", left:'0', marginTop:'-24px', border:'2px solid #e3bab3', borderLeft:'0', borderTop:'0'}} className="img-responsive"
+                 alt="Magdalena Stachurska" src={require("assets/img/eyeC3.jpg")} />
               </Col>
 
-                <Col lg="7" sm="12" className="my-auto px-5" style={{paddingBottom:'60px'}} >   
+                <Col lg="7" sm="12" className="my-auto px-5 text-center" style={{paddingBottom:'30px'}} >   
                 
                     <p className="h2 text-center pb-4 pt-5 pt-sm-0 text-dark mt-0"><bold>Jak pracuje wedding planner?</bold></p>
-                    <p className="description pb-3 font-weight-normal">Kontakt przedewszystkiem adipisicing elit. Quasi dolor aut facilis maxime nemo vel iusto, perspiciatis minus quo velit atque tempora nam ullam nulla, error quis, eaque tempore quas.</p>
-                    <p className="description pb-3 font-weight-normal">Quasi dolor aut facilis maxime nemo vel iusto, perspiciatis minus quo velit atque tempora nam ullam nulla, W razie w mozesz wybrac pakiet ponizej</p>
+                    <p className="description pb-3 font-weight-bold h4 sec-colour">1 - Ustalmy wasze oczekiwania</p>
+                    <p className="description pb-3 font-weight-normal border-bottom">Wypełnijcie bezpłatną ankietę, a ja przygotuję dla was ofertę</p>
+                    <p className="description pb-3 font-weight-bold  pt-3 h4 sec-colour mt-0">2 - Uzgodnijmy zakres mojej pracy</p>
+                    <p className="description pb-3 font-weight-normal border-bottom">Spotkajmy się przy kawie, bądź omówimy szczegółt telefonicznie</p>
+                    <p className="description pb-3 font-weight-bold  pt-3 h4 sec-colour mt-0">3 - Podejmijmy współpracę </p>
+                    <p className="description pb-3 font-weight-normal border-bottom">Zdecydujcie czy chcecie ze mną współpracować i podpiszcie umowę</p>
+                    <p className="description pb-3 font-weight-bold  pt-3 h4 sec-colour mt-0">4 - Zrelaksujcie się <i className="fa fa-heart sec-colour" /></p>
+                    <p className="description pb-3 font-weight-normal">Resztą zajmę się ja</p>
      
                 </Col>
             </Row>
     
       </div>
       <OfferSummary />
-      <SectionCarousel />
       <SectionWeddingTypes />
+      <SectionCarousel />
       <ContactSummary refProp={myRef}/>
       <ContactForm />
       <DemoFooter />

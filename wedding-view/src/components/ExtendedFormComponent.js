@@ -15,34 +15,95 @@ import {
     Label,
     Input
   } from "reactstrap";
-
+  import { validate } from 'assets/js/main.js'
   import ReactDatetime from "react-datetime"
   import axios from 'axios';
+  var moment = require('moment');
+    require('moment/locale/pl');    
   
   const navLinkStyle = {color:"white", fontWeight:'700'}
 
 class ExtendedFormComponent extends React.Component{
 
+    constructor(props) {
+        
+        super(props);
+        this.state = { activeTab: "1", apiResponse: ""};
+
+    }
+
     handleSubmit(e){
         e.preventDefault();
+
+        let nameInputs = document.querySelectorAll('#name-row input');
+        let contactInputs = document.querySelectorAll('#contact-row input');
+
+        let validationFlag=0;
+
+        for( let input of nameInputs ){
+
+            if ( validate(input) ) validationFlag = 1
+            else{
+                validationFlag = 0
+            } 
+
+        }
+        for( let input of nameInputs ){
+            if ( validate(input) ){
+                document.querySelector('#validation-error').innerHTML='';
+                input.style.backgroundColor = '#fff';
+            } 
+            else {
+                input.style.backgroundColor = '#ffc0a4';
+                document.querySelector('#validation-error').innerHTML='Uzupełnij wymagane pola!';
+            }
+        }
+        if( !validationFlag ) return 0
+        for( let input of contactInputs ){
+            console.log(input)
+            if ( validate(input) ){
+                validationFlag = 1
+                break;
+            } 
+            else{
+                validationFlag = 0;
+                document.querySelector('#contact-row input').style.backgroundColor='#ffc0a4';
+                document.querySelector('#validation-error').innerHTML='Uzupełnij wymagane pola!';
+            } 
+        }
+
+        if( !validationFlag ){
+            console.log('Not this time');
+            return false;
+        } 
+
+        if (this.state.activeTab !== 2) {
+            this.setState({activeTab: '2'})
+        }
+
         axios({
             method: "POST", 
-            url:"http://localhost:9000/send", 
+            url:"https://zsimarket.usermd.net/send", 
             data: {
-                bride: document.getElementById('bride').value,
-                groom: document.getElementById('groom').value,
-                phone: document.getElementById('phone').value,
-                email: document.getElementById('email').value,
+                brideFirstName: document.getElementById('brideFirstName').value,
+                brideLastName: document.getElementById('brideLastName').value,
+                groomFirstName: document.getElementById('groomFirstName').value,
+                groomLastName: document.getElementById('groomLastName').value,
+                phone: document.getElementById('phone1').value,
+                phone: document.getElementById('phone2').value,
+                email: document.getElementById('email1').value,
+                email: document.getElementById('email2').value,
                 budget: document.getElementById('budget').value,
             }
         }).then((response)=>{
             if (response.data.msg === 'success'){
-                alert("Message Sent."); 
+                alert("Wiadomość wysłana"); 
                 // document.getElementById("contact-form").reset();
             }else if(response.data.msg === 'fail'){
                 alert("Message failed to send.")
             }
         })
+        console.log(this.state)
     }
     handleClick(e){
         // e.preventDefault();
@@ -64,7 +125,7 @@ class ExtendedFormComponent extends React.Component{
         
         axios({
             method: "POST", 
-            url:"http://localhost:9000/send2", 
+            url:"https://zsimarket.usermd.net/send2", 
             data: {
                 bride: document.getElementById('bride').value,
                 groom: document.getElementById('groom').value,
@@ -75,13 +136,14 @@ class ExtendedFormComponent extends React.Component{
                 weddingExtras: checkedWeddingAdds,
                 partyPlace: document.getElementById('partyPlace').value,
                 partySpot: document.getElementById('partySpot').value,
+                partyRange: document.getElementById('partyRange').value,
                 partyExtras: checkedPartyAdds,
                 additionalMessage: document.getElementById('additionalMessage').value,
                 additionalExtras: checkedAdditionalAdds,
             }
         }).then((response)=>{
             if (response.data.msg === 'success'){
-                alert("Message Sent."); 
+                alert("Wiadomość wysłana"); 
                 document.getElementById("contact-form").reset();
             }else if(response.data.msg === 'fail'){
                 alert("Message failed to send.")
@@ -89,11 +151,14 @@ class ExtendedFormComponent extends React.Component{
         })
     }
 
-    constructor(props) {
-        super(props);
-        this.state = { activeTab: "1", apiResponse: "" };
+    handleChange(e){
+        e.target.style.backgroundColor = '#fff'
     }
-    
+    handleChange2(e){
+        console.log(e.target.parentNode.children)
+        e.target.parentNode.parentNode.children[1].children[0].style.backgroundColor = '#fff'
+    }
+
 
     render(){
             const toggle = tab => {
@@ -160,28 +225,35 @@ class ExtendedFormComponent extends React.Component{
                             <Row>
                                 <p className="h4 w-100 text-center font-weight-bold mt-0 mb-3 prim-colour">Podstawowe informacje</p>
                             </Row>
-                            <Row className="p-2">
+                            <Row className="p-2" id="name-row">
                                 
                                 <div className="form-group col-md-6">
                                     <label htmlFor="bride">Panna Młoda</label>
-                                    <input placeholder="Imię i Nazwisko" type="text" className="form-control " id="bride" />
+                                    <input placeholder="Imię" type="text" className="form-control " id="brideFirstName" onChange={ this.handleChange.bind(this) } />
+                                    <input placeholder="Nazwisko" type="text" className="form-control mt-3" id="brideLastName" onChange={ this.handleChange.bind(this) } />
                                 </div>
                                 <div className="form-group col-md-6">
                                     <label htmlFor="groom">Pan młody</label>
-                                    <input placeholder="Imię i Nazwisko" type="text" className="form-control " id="groom" aria-describedby="emailHelp" />
+                                    <input placeholder="Imię" type="text" className="form-control " id="groomFirstName" onChange={ this.handleChange.bind(this) } />
+                                    <input placeholder="Nazwisko" type="text" className="form-control mt-3" id="groomLastName" onChange={ this.handleChange.bind(this) } />
                                 </div>
                             </Row>
-                            <Row className="p-2">
-                                <p className="w-100 font-weight-bold" style={{marginBottom:"8px"}}>Dane kontaktowe</p>
-                                <div className="form-group col-md-6">
-                                    
-                                    <input placeholder="Telefon kontaktowy" type="text" className="form-control " id="phone" />
+                            <Row className="p-2" id='contact-row'>
+                                <p className="w-100 font-weight-bold" style={{marginBottom:"8px"}}>Dane kontaktowe <span style={{color:'gray'}}>(min. 1)</span></p>
+                                <div className="form-group col-md-6">   
+                                    <input placeholder="Telefon kontaktowy" type="text" className="form-control " id="phone1" onChange={ this.handleChange2.bind(this) } />
                                 </div>
-                                <div className="form-group col-md-6">
-                                    
-                                    <input placeholder="Email" type="email" className="form-control " id="email" aria-describedby="emailHelp" />
+                                <div className="form-group col-md-6">   
+                                    <input placeholder="Telefon kontaktowy" type="text" className="form-control " id="phone2" onChange={ this.handleChange2.bind(this) } />
+                                </div>
+                                <div className="form-group col-md-6">                                    
+                                    <input placeholder="Email" type="email" className="form-control " id="email1" aria-describedby="emailHelp"  onChange={ this.handleChange2.bind(this) }/>
+                                </div>
+                                <div className="form-group col-md-6">   
+                                    <input placeholder="Email" type="text" className="form-control " id="email2"  onChange={ this.handleChange2.bind(this) }/>
                                 </div>
                             </Row>
+                            
                             <Row className="p-2">
                                 <div className="form-group col-md-6 mx-auto">
                                     <label htmlFor="placeSelect">Planowany budżet na całą uroczystość</label>
@@ -193,10 +265,23 @@ class ExtendedFormComponent extends React.Component{
                                         <option value="Powyżej 100 000 zł">Powyżej 100 000 zł</option>
                                     </select>
                                 </div> 
+                            </Row> 
+                            <Row className="p-2">
+                                <div className="form-group col-md-6 mx-auto">
+                                    <label htmlFor="placeSelect">Planowana ilość osób</label>
+                                    <select name="carlist" form="carform" className='form-control' id="budget">
+                                        
+                                        <option value="Poniżej 30 000 zł">Poniżej 50</option>
+                                        <option value="30 000 - 60 000 zł">50 - 100 zł</option>
+                                        <option value="60 000 - 100 000 zł">100 - 200 zł</option>
+                                        <option value="Powyżej 100 000 zł">Powyżej 200</option>
+                                    </select>
+                                </div> 
                             </Row>   
+                            <Row className='text-center'><p className='text-danger h6 w-100' id="validation-error"></p></Row>
                             <button type="submit" className="btn btn-round px-5 m-4 sec-colour-bg"
                             onClick={() => {
-                                toggle("2");
+                                {/* toggle("2"); */}
                             }}>Dalej</button>
                         </form>
                     </TabPane>
@@ -215,7 +300,7 @@ class ExtendedFormComponent extends React.Component{
                                                 className='text-center' 
                                                 inputProps={{
                                                 placeholder: "Możesz pominąć to pole",
-                                                id: 'weddingDatetime'
+                                                id: 'weddingDatetime',
                                                 }}
                                             />
                                             <InputGroupAddon addonType="append">
@@ -233,24 +318,25 @@ class ExtendedFormComponent extends React.Component{
                                     <select name="carlist" form="carform" className='form-control' id="weddingType">
                                         <option value="Cywilny">Cywilny</option>
                                         <option value="Konkordatowy">Konkordatowy</option>
-                                        <option value="Plenerowy">Plenerowy</option>
                                         <option value="Wyznaniowy">Wyznaniowy</option>
                                         <option value="Humanistyczny">Humanistyczny</option>
+                                        <option value="Nie wiem">Nie wiem</option>
                                     </select>
                                 </div> 
                             </Row>
                             <Row className="p-2">
                                 <div className="form-group col-md-6">
                                     <label htmlFor="weddingPlace">Miejscowość</label>
-                                    <input placeholder="W której ma odbyć się ślub" type="text" className="form-control " id="weddingPlace" />
+                                    <input placeholder="W której ma odbyć się ślub" type="text" className="form-control " id="weddingPlace" onChange={this.handleChange.bind(this)} />
                                 </div>
                                 <div className="form-group col-md-6">
                                     <label htmlFor="placeSelect">Miejsce ślubu</label>
-                                    <select name="carlist" form="carform" className='form-control' id="weddingSpot">
+                                    <select name="weddingSpot" form="carform" className='form-control' id="weddingSpot">
                                         <option value="Kościół">Kościół</option>
                                         <option value="Urząd Stanu Cywilnego">Urząd Stanu Cywilnego</option>
                                         <option value="Plener">Plener</option>
                                         <option value="Inne">Inne</option>
+                                        <option value="Nie wiem">Nie wiem</option>
                                     </select>
                                 </div> 
                             </Row>
@@ -261,12 +347,6 @@ class ExtendedFormComponent extends React.Component{
                                         <Label check>
                                             <Input  defaultValue="Formalności związane ze ślubem" type="checkbox" />
                                             Formalności związane ze ślubem <span className="form-check-sign" />
-                                        </Label>
-                                    </FormGroup>
-                                    <FormGroup check>
-                                        <Label check>
-                                            <Input  defaultValue="Wybór tematu przewodniego" type="checkbox" />
-                                            Wybór tematu przewodniego <span className="form-check-sign" />
                                         </Label>
                                     </FormGroup>
                                     <FormGroup check>
@@ -334,7 +414,7 @@ class ExtendedFormComponent extends React.Component{
                                     </FormGroup>
                                     <FormGroup check>
                                         <Label check>
-                                            <Input  defaultValue="Oprawa muzyczna" type="checkbox" />
+                                            <Input  defaultValue="Ślubna oprawa muzyczna" type="checkbox" />
                                             Oprawa muzyczna <span className="form-check-sign" />
                                         </Label>
                                     </FormGroup>
@@ -344,12 +424,7 @@ class ExtendedFormComponent extends React.Component{
                                             Pojazd do ślubu <span className="form-check-sign" />
                                         </Label>
                                     </FormGroup>
-                                    <FormGroup check>
-                                        <Label check>
-                                            <Input  defaultValue="Upominki dla gości ślubnych" type="checkbox" />
-                                            Upominki dla gości ślubnych <span className="form-check-sign" />
-                                        </Label>
-                                    </FormGroup>
+      
                                     <FormGroup check>
                                         <Label check>
                                             <Input  defaultValue="Transport gości" type="checkbox" />
@@ -358,11 +433,22 @@ class ExtendedFormComponent extends React.Component{
                                     </FormGroup>
                                 </Col>   
                             </Row>
+
+                            <Row className='text-center'><p className='text-danger h6 w-100' id="validation-error2"></p></Row>
                             
                             <button type="submit" className="btn btn-round px-5 m-4 sec-colour-bg"
                             onClick={() => {
-                                toggle("3");
-                                console.log(document.getElementById('weddingDatetime').value,);
+                                let spotInput = document.querySelector('#weddingPlace');
+                                if( validate(spotInput) ){
+                                    spotInput.style.backgroundColor='#fff';
+                                    toggle("3");
+                                    document.querySelector('#validation-error2').innerHTML='';
+                                } 
+                                else{
+                                    spotInput.style.backgroundColor='#ffc0a4';
+                                    document.querySelector('#validation-error2').innerHTML='Uzupełnij wymagane pola!';
+
+                                }     
                                 
                             }}>Dalej</button>
                                 
@@ -380,7 +466,7 @@ class ExtendedFormComponent extends React.Component{
                                 </div>
                                 <div className="form-group col-md-6">
                                     <label htmlFor="placeSelect">Miejsce uroczystości weselnej</label>
-                                    <select name="carlist" form="carform" className='form-control' id="partySpot">
+                                    <select name="carlist" className='form-control' id="partySpot">
                                         <option value="Sala weselna">Sala weselna</option>
                                         <option value="Restauracja">Restauracja</option>
                                         <option value="Zamek">Zamek</option>
@@ -390,6 +476,16 @@ class ExtendedFormComponent extends React.Component{
                                     </select>
                                 </div> 
                             </Row>
+                            <Row className="p-2">
+                                <div className="form-group col-md-6 mx-auto">
+                                    <label htmlFor="placeSelect">Tolerowana odległość uroczystości od miejsca ślubu</label>
+                                    <select name="partyRange" className='form-control' id="partyRange">
+                                        <option value="Poniżej 30 km">Poniżej 30 km</option>
+                                        <option value="30 - 60 km">30 - 60 km</option>
+                                        <option value="Powyżej 60 km">Powyżej 60 km</option>
+                                    </select>
+                                </div> 
+                            </Row> 
                             <Row className='text-left p-4' id='partyExtras'>
                             <p className="w-100 font-weight-bold text-center pb-4" style={{marginBottom:"8px"}}>Zaznacz, w co pozwolisz mi się zaangażować <i className="fa fa-heart"></i></p>
                                 <Col md='6'>
@@ -513,7 +609,7 @@ class ExtendedFormComponent extends React.Component{
                             </Row>
                             <Row>
                             <div className="form-group w-100">
-                                <label htmlFor="message">Jeśli chcesz coś dodać:</label>
+                                <label htmlFor="message">Napisz, jeśli chcesz coś dodać:</label>
                                 <textarea className="form-control uneditable-input text-center" rows="5" id="additionalMessage"></textarea>
                             </div>
                             </Row>

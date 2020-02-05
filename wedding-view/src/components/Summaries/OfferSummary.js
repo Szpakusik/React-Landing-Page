@@ -11,7 +11,7 @@ let displayShowMore;
 let bundleDescription;
 if(window.location.pathname !== "/oferta"){
     displayShowMore = "flex";
-    bundleDescription = `Wiemy że każde wesele jest inne. Sprawdź mój szeroki wachlarz usług i wybierz coś dla siebie!`;
+    bundleDescription = `Każdą parę traktuję indywidualnie. Sprawdź mój szeroki wachlarz usług i wybierz coś dla siebie!`;
 }
 
 else{
@@ -45,8 +45,8 @@ let OfferSummary = () => {
                     <Card className="m-3 inherit2 rounded-0 mt-4">
                         <CardImg className="rounded-0" top src={require("assets/img/wholewedd.jpg")} alt="Card image cap p-2" />
                         <CardBody>
-                            <CardTitle className="text-white h5 font-weight-bold">Pełna organizacja ślubu</CardTitle>
-                            <CardText className="text-white">Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                            <CardTitle className="text-white h5 font-weight-bold">Kompleksowa organizacja ślubu i wesela</CardTitle>
+                            <CardText className="text-white">Zaplanuję wszystkie elementy związane z uroczystością oraz zapewnię wszystkich usługodawców</CardText>
                         </CardBody>
                     </Card>            
                 </Col>
@@ -54,8 +54,8 @@ let OfferSummary = () => {
                     <Card className="m-3 inherit2 rounded-0 mt-4">
                         <CardImg className="rounded-0" top src={require("assets/img/mixedlang2.jpg")} alt="Card image cap" />
                         <CardBody>
-                            <CardTitle className="text-white h5 font-weight-bold">Ślub dwujęzyczny</CardTitle>
-                            <CardText className="text-white">Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                            <CardTitle className="text-white h5 font-weight-bold">Organizacja poszczególnych elementów</CardTitle>
+                            <CardText className="text-white">Uzupełnię waszą listę usługodawców</CardText>
                         </CardBody>
                     </Card>            
                 </Col>
@@ -63,14 +63,16 @@ let OfferSummary = () => {
                     <Card className="m-3 inherit2 rounded-0 mt-4">
                         <CardImg className="rounded-0" top src={require("assets/img/lateness2.jpg")} alt="Card image cap" />
                         <CardBody>
-                            <CardTitle className="text-white h5 font-weight-bold">Wesele Last-Minute</CardTitle>
-                            <CardText className="text-white">Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                            <CardTitle className="text-white h5 font-weight-bold">Koordynacja dnia ślubu i wesela</CardTitle>
+                            <CardText className="text-white">Zadbam o każdy szczegół w tym ważnym dla was dniu. Zgram wszystkich podwykonawców i zaopiekuję sie wami.</CardText>
                         </CardBody>
                     </Card>            
                 </Col>
                 <Row className={`w-100 text-center mx-auto`}>
                     <div id='bundleDescription' className="h4 font-weight-normal text-white m-5 w-100 inherit2 p-5 ">{bundleDescription}</div>
-                    <Button className={`mx-auto d-${displayShowMore}`}>Zobacz pełną ofertę</Button>
+                    <a href='/oferta' className={`btn mx-auto d-${displayShowMore}`}>
+                        Zobacz pełną ofertę
+                    </a>
                 </Row>
             </Row>
            

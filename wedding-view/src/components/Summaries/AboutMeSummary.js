@@ -6,10 +6,10 @@ import { Row, Col } from 'reactstrap';
 //     // applies .container-fluid class
 // }
 
-let AboutMeSummary = () => {
+let AboutMeSummary = (props) => {
     return(
     <>
-    <div className="section-dark border-top">
+    <div ref={props.refProp} className="section-dark border-top">
         <div className="container-fluid">
             <Row>
                 
@@ -23,8 +23,18 @@ let AboutMeSummary = () => {
                 
 
                 <p className="h2 text-center pb-4 text-light"><bold>Mów mi Magda!</bold></p>
-                    <p className="description pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolor aut facilis maxime nemo vel iusto, perspiciatis minus quo velit atque tempora nam ullam nulla, error quis, eaque tempore quas.</p>
-                    <p className="description pb-3">Quasi dolor aut facilis maxime nemo vel iusto, perspiciatis minus quo velit atque tempora nam ullam nulla, error quis, eaque tempore quas...</p>
+                    <p className="description pb-3 text-center">
+                        Ceremonia zaślubin jest jednym z najważniejszych wydarzeń w naszym życiu. Chcemy, aby ten dzień
+                        był perfekcyjny pod każdym względem, co wymaga jednak dużo czasu i energii poświęconych
+                        organizacji. By uniknąć stresu związanego z nadmiarem obowiązków, można skorzystać z usług
+                        konsultanta ślubnego, który służy radą i pomocą. Dogląda on także i koordynuje każdy etap związany z
+                        przygotowaniem uroczystości w stałym kontakcie z parą młodą, nie umniejszając ich wkładu.
+                        Ekspercka wiedza, a także rozeznanie w branży ślubnych usługodawców, <br />sprawi, że wizje młodej pary
+                        staną się rzeczywistością.
+                    </p>
+                    <p className="description pb-3 text-center">
+                        
+                    </p>
                     <Row className="text-center ">
                         <a href='/o-mnie' className='btn thrd-colour-bg btn-round ml-auto mr-auto mb-5'>
                             <i className="fa fa-heart mr-1" />

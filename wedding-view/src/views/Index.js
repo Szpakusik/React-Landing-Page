@@ -58,19 +58,20 @@ function Index() {
   });
 
   
-  const myRef = useRef(null)
-  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+  const contactRef = useRef(null)
+  const aboutRef = useRef(null)
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop-80);
 
 
   return (
     <>
-      <IndexNavbar exeScroll={scrollToRef} myRefe={myRef}/>
-      <IndexHeader />
+      <IndexNavbar exeScroll={scrollToRef} myRefe={contactRef}/>
+      <IndexHeader exeScroll={scrollToRef} myRefe={aboutRef}/>
       <div className="main"> 
       
-        <AboutMeSummary />
+        <AboutMeSummary refProp={aboutRef}/>
         <OfferSummary />
-        <ContactSummary refProp={myRef} />
+        <ContactSummary refProp={contactRef} />
         <ContactForm />
         <DemoFooter />
         {/* <SectionButtons />

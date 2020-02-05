@@ -30,7 +30,7 @@ let ContactSummary = (props) => {
                     
                     <Row className="text-left p-5">
                         <p className="h3 p-4 m-0 w-100 sec-colour font-weight-normal">Telefonicznie:</p>
-                        <p className="h4 p-4 m-0 w-100">570546987</p>
+                        <p className="h4 p-4 m-0 w-100">(+48) 786 236 868</p>
                         <p className="h3 p-4 m-0 w-100 sec-colour font-weight-normal">Przez E-Mail:</p>
                         <p className="h4 p-4 m-0 w-100">Maddziula@gmail.com</p>
                     </Row>

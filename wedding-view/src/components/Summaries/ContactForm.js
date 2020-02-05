@@ -28,7 +28,7 @@ class ContactSummary extends React.Component{
         const message = document.getElementById('message').value;
         axios({
             method: "POST", 
-            url:"http://localhost:9000/send", 
+            url:"https://zsimarket.usermd.net/send3", 
             data: {
                 name: name,   
                 email: email,  
@@ -36,7 +36,7 @@ class ContactSummary extends React.Component{
             }
         }).then((response)=>{
             if (response.data.msg === 'success'){
-                // alert("Message Sent."); 
+                 alert("Wiadomość wysłana"); 
                 document.getElementById("contact-form").reset();
             }else if(response.data.msg === 'fail'){
                 alert("Message failed to send.")

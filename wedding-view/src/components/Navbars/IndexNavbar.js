@@ -30,6 +30,10 @@ import {
   Nav,
   Container
 } from "reactstrap";
+import { detectMob } from 'assets/js/main.js'
+
+
+let logoWidth = window.innerWidth < 960 ? '270px' : '335px'; 
 
 
 function IndexNavbar({exeScroll,myRefe}) {
@@ -80,13 +84,13 @@ function IndexNavbar({exeScroll,myRefe}) {
       <Container>
       <a href="/">
            <div className="logo-container">
-                <div className="logo border-0 rounded-0" style={{width:"335px"}}>
-                    <img src={require("assets/img/LOGO2.png")} alt="Magda Stachurska Logo" style={{width:"335px"}} />
+                <div className="logo border-0 rounded-0" style={{width:logoWidth, paddingBottom:'5px'}}>
+                    <img src={require("assets/img/LOGO2.png")} alt="Magda Stachurska Logo" style={{width:logoWidth}} />
                 </div>
 
             </div>
       </a>
-        <div className="navbar-translate w-25">
+        <div className="navbar-translate" style={{ width: '19%' }}>
           <NavbarBrand
             data-placement="bottom"
             href="/index"

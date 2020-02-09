@@ -40,10 +40,9 @@ return(
                       </div>
                     </a>
                     <p className="card-description text-center">
-                      A group becomes a team when each member is sure enough of
-                      himself and his contribution to praise the skill of the
-                      others. No one can whistle a symphony. It takes an
-                      orchestra to play it.
+                     Ślub zawarty w Urzędzie Stanu Cywilnego też może 
+                     wyglądać atrakcyjnie. Napisz do mnie i przekonaj się co zrobić,
+                     aby Wasza uroczystość została zapamiętana na długo.
                     </p>
                   </CardBody>
                   
@@ -66,10 +65,9 @@ return(
                       </div>
                     </a>
                     <p className="card-description text-center">
-                      The strength of the team is each individual member. The
-                      strength of each member is the team. If you can laugh
-                      together, you can work together, silence isn’t golden,
-                      it’s deadly.
+                     Połączenie ślubu cywilnego z kościelnym to jeden z najczęściej 
+                     wybieranych ślubów w Polsce. Skontaktuj się ze mną, aby dowiedzieć
+                     się jakich formalności należy dopełnić.
                     </p>
                   </CardBody>
                   
@@ -92,9 +90,12 @@ return(
                       </div>
                     </a>
                     <p className="card-description text-center">
-                      Teamwork is so important that it is virtually impossible
-                      for you to reach the heights of your capabilities or make
-                      the money that you want without becoming very good at it.
+                     Jest to wyjątkowa ceremonia zarówno
+                     dla Państwa młodych jak i dla ich 
+                     rodziny. Jednak sam ślub kościelny nie 
+                     jest ważny prawnie. Jakich dokumentów 
+                     potrzebujesz żeby przyjąć sakrament 
+                     małżeństwa? Skontaktuj się ze mną.
                     </p>
                   </CardBody>
                   
@@ -120,9 +121,9 @@ return(
                             </div>
                             </a>
                             <p className="card-description text-center">
-                            Teamwork is so important that it is virtually impossible
-                            for you to reach the heights of your capabilities or make
-                            the money that you want without becoming very good at it.
+                              Ślub cywilny poza Urzędem Stanu Cywilnego lub kościelny lecz poza murami
+                              kościoła? Napisz do mnie i dowiedz się, jak zorganizować malowniczy ślub w plenerze 
+                              oraz sprawdź z jakimi kosztami się to wiąże.
                             </p>
                         </CardBody>
                         
@@ -145,16 +146,17 @@ return(
                             </div>
                             </a>
                             <p className="card-description text-center">
-                            A group becomes a team when each member is sure enough of
-                            himself and his contribution to praise the skill of the
-                            others. No one can whistle a symphony. It takes an
-                            orchestra to play it.
+                             Marzysz o efektownej ceremonii stworzonej wyłącznie 
+                             dla Was ? A może o przysiędze wypowiedzianej prosto 
+                             z serca? Ta forma ślubu jest dla Was.
+                             Wypełnij formularz kontaktowy aby dowiedzieć się więcej.
+
                             </p>
                         </CardBody>
                         
                         </Card>
                 </Col>
-                <Col md='2' />  
+                    <Col md='2' />  
             </Row>
             <Row className="text-center w-100 mx-auto">
             <p className="h3 p-2 m-0 w-100 font-weight-normal text-white" >Dodatki</p>
@@ -166,10 +168,9 @@ return(
                     <i className="nc-icon nc-album-2" />
                   </div>
                   <div className="description">
-                    <h4 className="info-title mt-0">Temat Przewodni</h4>
+                    <h4 className="info-title mt-0">Formalności</h4>
                     <p className="description">
-                      Spend your time generating new ideas. You don't have to
-                      think of implementing.
+                    Jak podpisać umowę z podwykonawcami ? Jakich dokumentów potrzebujecie, aby zawrzeć związek małżeński? Razem dopełnimy wszelkich formalności.
                     </p>
                     
                   </div>
@@ -183,8 +184,7 @@ return(
                   <div className="description">
                     <h4 className="info-title mt-0">Fotograf</h4>
                     <p>
-                      Larger, yet dramatically thinner. More powerful, but
-                      remarkably power efficient.
+                      Jakiego fotografa wybrać, aby nie żałować decyzji? Moje rekomendacje będą niezbędne!
                     </p>
                     
                   </div>
@@ -196,10 +196,9 @@ return(
                     <i className="nc-icon nc-bus-front-12" />
                   </div>
                   <div className="description">
-                    <h4 className="info-title mt-0">Pojazd do ślubu</h4>
+                    <h4 className="info-title mt-0">Droga do ślubu</h4>
                     <p>
-                      Choose from a veriety of many colors resembling sugar
-                      paper pastels.
+                    Zastanawialiście się już czym pojechać do ślubu? Coś klasycznego i eleganckiego? A może sportowe auto? Zasugeruje sprawdzone firmy, z ofertą jakiej szukacie!
                     </p>
                   </div>
                 </div>
@@ -210,10 +209,9 @@ return(
                     <i className="nc-icon nc-diamond" />
                   </div>
                   <div className="description">
-                    <h4 className="info-title mt-0">Stylizacja</h4>
+                    <h4 className="info-title mt-0">Stylizacja ślubna</h4>
                     <p>
-                      Find unique and handmade delightful designs related items
-                      directly from our sellers.
+                      Dzięki mojej pomocy przy budowaniu Waszego wizerunku ślubnego poczujecie się niepowtarzalnie w tym ważnym dniu.
                     </p>
                     
                   </div>
@@ -223,7 +221,7 @@ return(
             <Row className='w-100 mx-auto'>
               <Col md='6'>
                 <ListGroup >
-                  <ListGroupItem className='bg-dark text-white'>Formalności związane ze ślubem</ListGroupItem>
+                  <ListGroupItem className='bg-dark text-white'>Temat Przewodni</ListGroupItem>
                   <ListGroupItem className='bg-dark text-white'>Save the date</ListGroupItem>
                   <ListGroupItem className='bg-dark text-white'>Zaproszenia</ListGroupItem>
                   <ListGroupItem className='bg-dark text-white'>Obrączki ślubne</ListGroupItem>

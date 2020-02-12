@@ -71,8 +71,7 @@ function AboutMe() {
             <Row className='w-100'>
               <Col className="ml-auto mr-auto text-center font-weight-normal" md="8" >
                 <p>
-                  Świeże spojrzenie oraz znajomość branżowych trendów sprawi, że sprostam
-                  waszym najśmielszym oczekiwaniom i nienagannie wywiążę się z powierzonych mi zadań.
+                	Świeże spojrzenie oraz znajomość branżowych trendów sprawi, że sprostam Waszym najśmielszym oczekiwaniom i wywiążę się z powierzonych mi zadań.
                 </p>
               </Col>
             </Row>
@@ -96,7 +95,7 @@ function AboutMe() {
               <p className='h2 font-weight-normal mt-5'>Z miłości do planowania...</p>
               <p className='font-weight-normal px-4 pt-3'>Planowanie i aranżowanie od zawsze            sprawiało mi ogromną przyjemność, dlatego postanowiłam
                   przekuć swoją pasję w zawód, podejmując studia kierunkowe, a także zdobywając certyfikat Konsultanta Ślubnego. </p>
-              <p className='font-weight-normal py-3 px-4 '>Wciąż rozwijam się uczestnicząc w targach ślubnych organizowanych w całej Polsce, co daje mi ogromną satysfakcję. Bądźcie pewni, że do waszej ceremonii podejdę z pasją dziecka i rozwagą profesjonalisty </p>
+              <p className='font-weight-normal py-3 px-4 '>Wciąż rozwijam się uczestnicząc w targach ślubnych organizowanych w całej Polsce, co daje mi ogromną satysfakcję. Bądźcie pewni, że do waszej ceremonii podejdę z pasją dziecka i rozwagą profesjonalisty.</p>
             </Col>
             <Col md='4' className='px-0'>
               <img
@@ -125,18 +124,13 @@ function AboutMe() {
                 </div>
             </Col>
             <p className=' font-weight-normal w-100'>
-              Cechuje mnie świetna organizacja pracy, oraz punktualność. Posiadam wysoko rozwinięte
-              umiejętności interpersonalne, należytą kreatywność i odpowiednie kompetencje. Jestem osoba
-              godną zaufania i konsekwentną. Najważniejsi dla mnie są moi klienci, których zdanie i sugestie cenię
-              sobie najbardziej.
+              Cechuje mnie świetna organizacja pracy oraz punktualność. Posiadam wysoko rozwinięte umiejętności interpersonalne, należytą kreatywność i odpowiednie kompetencje. Jestem osobą godną zaufania i konsekwentną. Najważniejsi dla mnie są moi klienci, których zdanie i sugestie cenię sobie najbardziej.
             </p>
             <p className=' font-weight-normal'> 
-              Angażując mnie w przygotowania, mogę zagwarantować fachowe wsparcie w organizacji
-              i koordynacji uroczystości, sprawdzonych podwykonawców, cenionych na rynku ślubnym oraz
-              odciążenie w stresujących sytuacjach, nie pozwalających w pełni cieszyć się wielkim dniem.
+              Zaangażowanie mnie w przygotowania, gwarantuję fachowe wsparcie w organizacji i koordynacji uroczystości, sprawdzonych podwykonawców, cenionych na rynku ślubnym oraz odciążenie w stresujących sytuacjach, nie pozwalających w pełni cieszyć się wielkim dniem.
             </p>
             <p className=' font-weight-bold w-100'> 
-              Każdą parę traktuję indywidualnie i taka też jest wycena mojej usługi.
+              Każdą parę traktuję indywidualnie i tak też wyceniam usługę.
             </p>
             <p className=' font-weight-normal w-100'>
               W razie dalszych pytań zapraszam do kontaktu osobistego lub przez portale społecznościowe.

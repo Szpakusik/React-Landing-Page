@@ -61,11 +61,11 @@ return(
                   <CardBody>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
-                        <CardTitle tag="h4" className='sec-colour font-weight-normal'>Konkoradowy</CardTitle>
+                        <CardTitle tag="h4" className='sec-colour font-weight-normal'>Konkordatowy</CardTitle>
                       </div>
                     </a>
                     <p className="card-description text-center font-weight-normal">
-                     Połączenie ślubu cywilnego z kościelnym to jeden z najczęściej 
+                     Połączenie ślubu cywilnego z kościelnym to jeden <br />z najczęściej 
                      wybieranych ślubów w Polsce. Skontaktuj się ze mną, aby dowiedzieć
                      się jakich formalności należy dopełnić.
                     </p>
@@ -86,12 +86,12 @@ return(
                   <CardBody>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
-                        <CardTitle tag="h4" className='sec-colour font-weight-normal'>Wyznaniowy</CardTitle>
+                        <CardTitle tag="h4" className='sec-colour font-weight-normal'>Kościelny</CardTitle>
                       </div>
                     </a>
                     <p className="card-description text-center font-weight-normal">
                      Jest to wyjątkowa ceremonia zarówno
-                     dla Państwa młodych jak i dla ich 
+                     dla Państwa Młodych jak i dla ich 
                      rodziny. Jednak sam ślub kościelny nie 
                      jest ważny prawnie. Jakich dokumentów 
                      potrzebujesz żeby przyjąć sakrament 
@@ -121,9 +121,8 @@ return(
                             </div>
                             </a>
                             <p className="card-description text-center font-weight-normal">
-                              Ślub cywilny poza Urzędem Stanu Cywilnego lub kościelny lecz poza murami
-                              kościoła? Napisz do mnie i dowiedz się, jak zorganizować malowniczy ślub w plenerze 
-                              oraz sprawdź z jakimi kosztami się to wiąże.
+                              Ślub cywilny poza Urzędem Stanu Cywilnego lub kościelny lecz poza murami kościoła? Napisz do mnie i dowiedz się, jak zorganizować malowniczy ślub w plenerze oraz sprawdź
+                              <br />z jakimi kosztami się to wiąże
                             </p>
                         </CardBody>
                         
@@ -146,11 +145,7 @@ return(
                             </div>
                             </a>
                             <p className="card-description text-center font-weight-normal">
-                             Marzysz o efektownej ceremonii stworzonej wyłącznie 
-                             dla Was ? A może o przysiędze wypowiedzianej prosto 
-                             z serca? Ta forma ślubu jest dla Was.
-                             Wypełnij formularz kontaktowy aby dowiedzieć się więcej.
-
+                              Marzysz o efektownej ceremonii stworzonej wyłącznie dla Was ? A może o przysiędze wypowiedzianej prosto z serca? Ta forma ślubu będzie idealna. Wypełnij formularz kontaktowy aby dowiedzieć się więcej.
                             </p>
                         </CardBody>
                         
@@ -170,7 +165,7 @@ return(
                   <div className="description">
                     <h4 className="info-title mt-0 font-weight-normal pb-2">Formalności</h4>
                     <p className="description font-weight-normal">
-                    Jak podpisać umowę z podwykonawcami ? Jakich dokumentów potrzebujecie, aby zawrzeć związek małżeński? Razem dopełnimy wszelkich formalności.
+                    Jak podpisać umowę z podwykonawcami? Jakich dokumentów potrzebujecie, aby zawrzeć związek małżeński? Razem dopełnimy wszelkich formalności.
                     </p>
                     
                   </div>
@@ -198,7 +193,7 @@ return(
                   <div className="description">
                     <h4 className="info-title mt-0 font-weight-normal pb-2">Droga do ślubu</h4>
                     <p className='font-weight-normal'>
-                    Zastanawialiście się już czym pojechać do ślubu? Coś klasycznego i eleganckiego? A może sportowe auto? Zasugeruje sprawdzone firmy, z ofertą jakiej szukacie!
+                    Zastanawialiście się już czym pojechać do ślubu? Coś klasycznego i eleganckiego? A może sportowe auto? Zasugeruję sprawdzone firmy, z ofertą jakiej szukacie!
                     </p>
                   </div>
                 </div>

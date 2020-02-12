@@ -24,7 +24,7 @@ let ContactSummary = (props) => {
                 <Col lg="6" className="my-auto p-5 text-center ">
                     <img style={{maxHeight: "200px"}} src={require("assets/img/profile2.png")} alt="" className="img-circle img-responsive"/>
                     <p className="h3 mt-0">Magdalena Stachurska</p>
-                    <p className="sec-colour font-weight-normal">Organizator Wesel</p>
+                    <p className="sec-colour font-weight-normal">Konsultant Ślubny</p>
                     <div className='mx-auto d-inline-block'>
                         <a href='https://www.instagram.com/ms.weddingplanner/?hl=pl' target='_blank'>
                             <img
@@ -41,9 +41,9 @@ let ContactSummary = (props) => {
                 <Col lg="6" className="my-auto text-center border-left">
                     
                     <Row className="text-left p-5">
-                        <p className="h3 p-4 m-0 w-100 sec-colour font-weight-normal">Telefonicznie:</p>
+                        <p className="h3 p-4 m-0 w-100 sec-colour font-weight-normal">Telefon:</p>
                         <p className="h4 p-4 m-0 w-100">(+48) 786 236 868</p>
-                        <p className="h3 p-4 m-0 w-100 sec-colour font-weight-normal">Przez E-Mail:</p>
+                        <p className="h3 p-4 m-0 w-100 sec-colour font-weight-normal">E-Mail:</p>
                         <p className="h4 p-4 m-0 w-100">info@msweddingplanner.pl</p>
                     </Row>
                     <Row>

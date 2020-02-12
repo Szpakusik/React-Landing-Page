@@ -58,7 +58,7 @@ let OfferSummary = () => {
                     <Card className="m-3 inherit2 rounded-0 mt-4">
                         <CardImg className="rounded-0" top src={require("assets/img/mixedlang2.jpg")} alt="Card image cap" />
                         <CardBody>
-                            <CardTitle className="text-white h5 font-weight-bold">Organizacja poszczególnych elementów</CardTitle>
+                            <CardTitle className="text-white h5 font-weight-bold">Częściowa organizacja dnia ślubu i wesela</CardTitle>
                             <CardText className="text-white my-auto">Uzupełnię waszą listę usługodawców</CardText>
                         </CardBody>
                     </Card>            

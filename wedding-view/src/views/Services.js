@@ -84,10 +84,10 @@ function Services() {
                 <Col lg="7" sm="12" className="my-auto px-5 text-center" style={{paddingBottom:'30px'}} >   
                 
                     <p className="h2 text-center pb-4 pt-5 pt-sm-0 text-dark mt-0"><bold>Jak pracuje wedding planner?</bold></p>
-                    <p className="description pb-3 font-weight-bold h4 sec-colour">1 - Ustalmy wasze oczekiwania</p>
-                    <p className="description pb-3 font-weight-normal border-bottom">Wypełnijcie bezpłatną ankietę, a ja przygotuję dla was ofertę</p>
+                    <p className="description pb-3 font-weight-bold h4 sec-colour">1 - Ustalmy Wasze oczekiwania</p>
+                    <p className="description pb-3 font-weight-normal border-bottom">Wypełnijcie bezpłatną ankietę, a ja przygotuję dla Was ofertę</p>
                     <p className="description pb-3 font-weight-bold  pt-3 h4 sec-colour mt-0">2 - Uzgodnijmy zakres mojej pracy</p>
-                    <p className="description pb-3 font-weight-normal border-bottom">Spotkajmy się przy kawie, bądź omówimy szczegółt telefonicznie</p>
+                    <p className="description pb-3 font-weight-normal border-bottom">Spotkajmy się przy kawie, bądź omówimy szczegóły telefonicznie</p>
                     <p className="description pb-3 font-weight-bold  pt-3 h4 sec-colour mt-0">3 - Podejmijmy współpracę </p>
                     <p className="description pb-3 font-weight-normal border-bottom">Zdecydujcie czy chcecie ze mną współpracować i podpiszcie umowę</p>
                     <p className="description pb-3 font-weight-bold  pt-3 h4 sec-colour mt-0">4 - Zrelaksujcie się <i className="fa fa-heart sec-colour" /></p>

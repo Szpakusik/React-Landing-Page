@@ -165,7 +165,7 @@ function IndexNavbar({exeScroll,myRefe}) {
                 data-placement="bottom"
                 href="https://www.instagram.com/ms.weddingplanner/?hl=pl"
                 target="_blank"
-                title="Follow us on Instagram"
+                title="Śledź nas na Instagramie"
               >
                 <i className="fa fa-instagram" />
                 <p className="d-lg-none">Instagram</p>

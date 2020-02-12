@@ -47,7 +47,7 @@ function IndexHeader() {
               </div>
             </div>
             <h2 className="presentation-subtitle text-center">
-              Uczynię ten dzień najlepszym w waszym życiu - Obiecuję!
+            	Uczynię ten dzień najlepszym w Waszym życiu
             </h2>
           </Container>
         </div>

@@ -93,7 +93,7 @@ function IndexNavbar({exeScroll,myRefe}) {
         <div className="navbar-translate" style={{ width: '19%' }}>
           <NavbarBrand
             data-placement="bottom"
-            href="/index"
+            href="/"
             target="_blank"
             title="Coded by Creative Tim"
           >
@@ -163,7 +163,7 @@ function IndexNavbar({exeScroll,myRefe}) {
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="#"
+                href="https://www.instagram.com/ms.weddingplanner/?hl=pl"
                 target="_blank"
                 title="Follow us on Instagram"
               >

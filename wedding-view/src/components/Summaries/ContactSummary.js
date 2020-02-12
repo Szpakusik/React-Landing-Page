@@ -23,8 +23,20 @@ let ContactSummary = (props) => {
             <Row>
                 <Col lg="6" className="my-auto p-5 text-center ">
                     <img style={{maxHeight: "200px"}} src={require("assets/img/profile2.png")} alt="" className="img-circle img-responsive"/>
-                    <p className="h3">Magdalena Stachurska</p>
+                    <p className="h3 mt-0">Magdalena Stachurska</p>
                     <p className="sec-colour font-weight-normal">Organizator Wesel</p>
+                    <div className='mx-auto d-inline-block'>
+                        <a href='https://www.instagram.com/ms.weddingplanner/?hl=pl' target='_blank'>
+                            <img
+                                alt="Magdalena Stachursa Planowanie wesel"
+                                className="img-no-padding img-responsive float-left pr-1 pt-1"
+                                src={require("assets/img/ig.png")}
+                                style={{width: '30px'}}
+                            />
+                            <p className="font-weight-bold float-left pt-2 text-dark h6">@ms.weddingplanner</p>
+                        </a>
+                    </div>
+                    
                 </Col>
                 <Col lg="6" className="my-auto text-center border-left">
                     
@@ -32,7 +44,7 @@ let ContactSummary = (props) => {
                         <p className="h3 p-4 m-0 w-100 sec-colour font-weight-normal">Telefonicznie:</p>
                         <p className="h4 p-4 m-0 w-100">(+48) 786 236 868</p>
                         <p className="h3 p-4 m-0 w-100 sec-colour font-weight-normal">Przez E-Mail:</p>
-                        <p className="h4 p-4 m-0 w-100">Maddziula@gmail.com</p>
+                        <p className="h4 p-4 m-0 w-100">info@msweddingplanner.pl</p>
                     </Row>
                     <Row>
                     </Row>

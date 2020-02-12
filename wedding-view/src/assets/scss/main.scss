@@ -53,3 +53,7 @@ input[type="color"]:focus,
 html{
     scroll-behavior: smooth;
 }
+
+.rdtCount, .rdtDays, .rdtOld, .rdtMonth, .rdtYear{
+    color: lightgray !important;
+}

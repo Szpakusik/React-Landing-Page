@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 import {
     Button,
     NavItem,
@@ -89,18 +90,20 @@ class ExtendedFormComponent extends React.Component{
                 brideLastName: document.getElementById('brideLastName').value,
                 groomFirstName: document.getElementById('groomFirstName').value,
                 groomLastName: document.getElementById('groomLastName').value,
-                phone: document.getElementById('phone1').value,
-                phone: document.getElementById('phone2').value,
-                email: document.getElementById('email1').value,
-                email: document.getElementById('email2').value,
+                phone1: document.getElementById('phone1').value,
+                phone2: document.getElementById('phone2').value,
+                email1: document.getElementById('email1').value,
+                email2: document.getElementById('email2').value,
+
                 budget: document.getElementById('budget').value,
+                guestNumber: document.getElementById('guestNumber').value,
             }
         }).then((response)=>{
             if (response.data.msg === 'success'){
-                alert("Wiadomość wysłana"); 
+                console.log("Wiadomość wysłana"); 
                 // document.getElementById("contact-form").reset();
             }else if(response.data.msg === 'fail'){
-                alert("Message failed to send.")
+                console.log("Wiadomość wysłana"); 
             }
         })
         console.log(this.state)
@@ -127,8 +130,10 @@ class ExtendedFormComponent extends React.Component{
             method: "POST", 
             url:"https://zsimarket.usermd.net/send2", 
             data: {
-                bride: document.getElementById('bride').value,
-                groom: document.getElementById('groom').value,
+                brideFirstName: document.getElementById('brideFirstName').value,
+                brideLastName: document.getElementById('brideLastName').value,
+                groomFirstName: document.getElementById('groomFirstName').value,
+                groomLastName: document.getElementById('groomLastName').value,
                 weddingDate: document.getElementById('weddingDatetime').value,
                 weddingType: document.getElementById('weddingType').value,
                 weddingPlace: document.getElementById('weddingPlace').value,
@@ -140,13 +145,16 @@ class ExtendedFormComponent extends React.Component{
                 partyExtras: checkedPartyAdds,
                 additionalMessage: document.getElementById('additionalMessage').value,
                 additionalExtras: checkedAdditionalAdds,
+                budget: document.getElementById('budget').value,
+                guestNumber: document.getElementById('guestNumber').value,
             }
         }).then((response)=>{
             if (response.data.msg === 'success'){
-                alert("Wiadomość wysłana"); 
-                document.getElementById("contact-form").reset();
+                alert('Prośba o wycenę została wysłana!')
+                this.props.history.push("/home");
+
             }else if(response.data.msg === 'fail'){
-                alert("Message failed to send.")
+                alert("Nie udało się wysłać wiadomości.")
             }
         })
     }
@@ -269,12 +277,12 @@ class ExtendedFormComponent extends React.Component{
                             <Row className="p-2">
                                 <div className="form-group col-md-6 mx-auto">
                                     <label htmlFor="placeSelect">Planowana ilość osób</label>
-                                    <select name="carlist" form="carform" className='form-control' id="budget">
+                                    <select name="carlist" form="carform" className='form-control' id="guestNumber">
                                         
-                                        <option value="Poniżej 30 000 zł">Poniżej 50</option>
-                                        <option value="30 000 - 60 000 zł">50 - 100 zł</option>
-                                        <option value="60 000 - 100 000 zł">100 - 200 zł</option>
-                                        <option value="Powyżej 100 000 zł">Powyżej 200</option>
+                                        <option value="Poniżej 50">Poniżej 50</option>
+                                        <option value="50 - 100">50 - 100</option>
+                                        <option value="100 - 200">100 - 200</option>
+                                        <option value="Powyżej 200">Powyżej 200</option>
                                     </select>
                                 </div> 
                             </Row>   
@@ -692,7 +700,6 @@ class ExtendedFormComponent extends React.Component{
                             onClick={() => {
                                 this.handleClick();
                             }}
-                            href='/'
                             >Wyślij</Button>
                         </div>
                     </TabPane>
@@ -702,4 +709,4 @@ class ExtendedFormComponent extends React.Component{
         )
     }
 }
-export default ExtendedFormComponent
+export default withRouter(ExtendedFormComponent)

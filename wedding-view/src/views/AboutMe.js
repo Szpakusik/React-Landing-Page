@@ -55,7 +55,7 @@ function AboutMe() {
       <ProfilePageHeader />
       <div className="section profile-content w-100 pb-0">
           <div className="owner pb-5 mb-5 mb-sm-0" style={Profiletyle}>
-            <div className="avatar">
+            <div className="avatar pb-1">
               <img
                 alt="..."
                 className="img-circle img-no-padding border img-responsive"
@@ -63,17 +63,15 @@ function AboutMe() {
               />
             </div>
             <div className="name">
-              <p className="title h2 font-weight-normal mt-1">
+              <p className="title h2 font-weight-normal mt-0 mb-0">
                 Magdalena Stachurska<br />
               </p>
               <h6 className="description sec-colour">Wedding Planner</h6>
             </div>
             <Row className='w-100'>
-              <Col className="ml-auto mr-auto text-center font-weight-normal" md="6" >
+              <Col className="ml-auto mr-auto text-center font-weight-normal" md="8" >
                 <p>
-                  Planowanie i aranżowanie od zawsze sprawiało mi ogromną przyjemność, dlatego postanowiłam
-                  przekuć swoją pasję w zawód, podejmując studia kierunkowe, a także zdobywając certyfikat
-                  Konsultanta Ślubnego. Świeże spojrzenie oraz znajomość branżowych trendów sprawi, że sprostam
+                  Świeże spojrzenie oraz znajomość branżowych trendów sprawi, że sprostam
                   waszym najśmielszym oczekiwaniom i nienagannie wywiążę się z powierzonych mi zadań.
                 </p>
               </Col>
@@ -95,15 +93,10 @@ function AboutMe() {
                   </div>
                 </div>
 
-              <p className='h2 font-weight-normal mt-5'>Cechuje mnie solidność</p>
-              <p className='font-weight-normal px-4 pt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Reiciendis cupiditate consequuntur, fuga ipsa accusamus obcaecati, 
-                maxime et, est dolorem voluptatum tempore necessitatibus commodi inventore amet 
-                nobis quasi consequatur suscipit nemo!</p>
-              <p className='font-weight-normal py-3 px-4 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Reiciendis cupiditate consequuntur, fuga ipsa accusamus obcaecati, 
-                maxime et, est dolorem voluptatum tempore necessitatibus commodi inventore amet 
-                nobis quasi consequatur!</p>
+              <p className='h2 font-weight-normal mt-5'>Z miłości do planowania...</p>
+              <p className='font-weight-normal px-4 pt-3'>Planowanie i aranżowanie od zawsze            sprawiało mi ogromną przyjemność, dlatego postanowiłam
+                  przekuć swoją pasję w zawód, podejmując studia kierunkowe, a także zdobywając certyfikat Konsultanta Ślubnego. </p>
+              <p className='font-weight-normal py-3 px-4 '>Wciąż rozwijam się uczestnicząc w targach ślubnych organizowanych w całej Polsce, co daje mi ogromną satysfakcję. Bądźcie pewni, że do waszej ceremonii podejdę z pasją dziecka i rozwagą profesjonalisty </p>
             </Col>
             <Col md='4' className='px-0'>
               <img

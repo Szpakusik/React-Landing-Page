@@ -96,7 +96,7 @@ function SectionCarousel() {
       <div className="section section-dark pt-0" id="carousel">
         <Container>
           <Row className="text-center">
-            <p className="h2 p-5 m-0 w-100 font-weight-normal">Wybór miejsca wesela</p>
+            <p className="h2 p-5 m-0 w-100 font-weight-normal text-white">Wybór miejsca wesela</p>
           </Row>
           <Row>
             <Col className="ml-auto mr-auto" md="10">
@@ -159,16 +159,16 @@ function SectionCarousel() {
             </Col>
           </Row>
           <Row className="text-center">
-            <p className="h3 p-2 m-0 w-100 font-weight-normal">Dodatki</p>
+            <p className="h3 p-2 m-0 w-100 font-weight-normal text-white">Dodatki</p>
           </Row>
           <Row className='text-center p-5'>
               <Col md="3">
                 <div className="info">
-                  <div className="icon ">
+                  <div className="icon sec-colour">
                     <i className="nc-icon nc-palette" />
                   </div>
                   <div className="description">
-                    <h4 className="info-title mt-2">Aranżacja sali weselnej</h4>
+                    <h4 className="info-title mt-2 pb-2">Aranżacja sali</h4>
                     <p className="description">
                     Pomogę Wam znaleźć idealną salę weselną i zdradzę jak ją udekorować, aby spełniała Wasze oczekiwania.
                     </p>
@@ -178,11 +178,11 @@ function SectionCarousel() {
               </Col>
               <Col md="3">
                 <div className="info">
-                  <div className="icon ">
+                  <div className="icon sec-colour">
                     <i className="nc-icon nc-tile-56" />
                   </div>
                   <div className="description">
-                    <h4 className="info-title mt-2">Tort</h4>
+                    <h4 className="info-title mt-2 pb-2">Tort</h4>
                     <p>
                     Zamówienie tortu to wcale nie taka prosta sprawa, szczególnie kiedy zamawiamy go po raz pierwszy, dlatego podpowiem Wam na co zwrócić uwagę.
                     </p>
@@ -192,11 +192,11 @@ function SectionCarousel() {
               </Col>
               <Col md="3">
                 <div className="info">
-                  <div className="icon ">
+                  <div className="icon sec-colour">
                     <i className="nc-icon nc-note-03" />
                   </div>
                   <div className="description">
-                    <h4 className="info-title mt-2">Dj/zespół muzyczny</h4>
+                    <h4 className="info-title mt-2 pb-2">Dj/zespół muzyczny</h4>
                     <p>
                     Odpowiednio dobrana muzyka jest gwarancją udanego wesela. Zaproponuję Wam sprawdzonych podwykonawców.
                     </p>
@@ -205,11 +205,11 @@ function SectionCarousel() {
               </Col>
               <Col md="3">
                 <div className="info">
-                  <div className="icon ">
+                  <div className="icon sec-colour">
                     <i className="nc-icon nc-satisfied" />
                   </div>
                   <div className="description">
-                    <h4 className="info-title mt-2">Animator dla dzieci</h4>
+                    <h4 className="info-title mt-2 pb-2">Animator dla dzieci</h4>
                     <p>
                     Animator zabaw dla dzieci właściwie zorganizuje czas najmłodszym w trakcie ślubu i wesela. Podpowiem Wam, na które firmy warto zwrócić uwagę.
                     </p>

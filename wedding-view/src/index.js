@@ -39,8 +39,7 @@ import RegisterPage from "views/examples/RegisterPage.js";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/index" render={props => <Index {...props} />} />
-
+      
       <Route path="/formularz" render={props => <ExtendedForm {...props} />} />
 
       <Route path="/oferta" render={props => <Services {...props} />} />
@@ -65,7 +64,8 @@ ReactDOM.render(
         path="/register-page"
         render={props => <RegisterPage {...props} />}
       />
-      <Redirect to="/index" />
+      <Route path="/" render={props => <Index {...props} />} />
+      <Redirect to="/" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

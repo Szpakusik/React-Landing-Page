@@ -24,6 +24,7 @@ transporter.verify((error, success) => {
 // Basic info from extended form
 router.post('/send', (req, res, next) => {
 
+
   const brideFirstName = req.body.brideFirstName;
   const brideLastName = req.body.brideLastName;
   const groomFirstName = req.body.groomFirstName;
@@ -33,13 +34,22 @@ router.post('/send', (req, res, next) => {
   const phone2 = req.body.phone2;
   const email2 = req.body.email2;
   const budget = req.body.budget;
+  const guestNumber = req.body.guestNumber;
 
-  var content = ` Panna Młoda: ${brideFirstName} ${brideLastName} \nPan Młody: ${groomFirstName} ${groomLastName} \nNumer Panny Młodej: ${phone1} \nEmail Panny Młodej: ${email1} \nNumer Pana Młodego: ${phone2} \nEmail Pana Młodego: ${email2} \nBudżet: ${budget} `
+  var content = `Panna Młoda: ${brideFirstName} ${brideLastName} \nPan Młody: ${groomFirstName} ${groomLastName} \nBudżet: ${budget}\nLiczba Gości: ${guestNumber}\n\n`
+
+  console.log(phone1, email1, phone2, email2)
+
+  if(phone1) content += `Numer Panny Młodej: ${phone1} \n`
+  if(email1) content += `Email Panny Młodej: ${email1} \n\n`
+
+  if(phone2) content += `Numer Pana Młodego: ${phone2} \n`
+  if(email2) content += `Email Pana Młodego: ${email2} `
 
   var mail = {
-    from: `${bride} i ${groom}`,
-    to: 'szpakusik@gmail.com',  //Change to email address that you want to receive messages on
-    subject: `Podstawowe informacje od ${bride} i ${groom}`,
+    from: `${brideFirstName} ${brideLastName} i ${groomFirstName} ${groomLastName} `,
+    to: 'info@msweddingplanner.pl',  //Change to email address that you want to receive messages on
+    subject: `Podstawowe informacje od ${brideFirstName} ${brideLastName} i ${groomFirstName} ${groomLastName} `,
     text: content,
   }
 
@@ -57,9 +67,12 @@ router.post('/send', (req, res, next) => {
 })
 // Advanced info from extended form
 router.post('/send2', (req, res, next) => {
-  const bride = req.body.bride;
-  const groom = req.body.groom;
 
+  console.log('HUJEC');
+  const brideFirstName = req.body.brideFirstName;
+  const brideLastName = req.body.brideLastName;
+  const groomFirstName = req.body.groomFirstName;
+  const groomLastName = req.body.groomLastName;
   const weddingDate = req.body.weddingDate;
   const weddingType = req.body.weddingType;
   const weddingPlace = req.body.weddingPlace;
@@ -67,23 +80,25 @@ router.post('/send2', (req, res, next) => {
   const weddingExtras = req.body.weddingExtras;
   const partyPlace = req.body.partyPlace;
   const partySpot = req.body.partySpot;
+  const partyRange = req.body.partyRange;
   const partyExtras = req.body.partyExtras;
   const additionalMessage = req.body.additionalMessage;
   const additionalExtras = req.body.additionalExtras;
 
   var content = `Data ślubu: ${weddingDate} \nTyp ślubu: ${weddingType} \nMiejscowość w której odbędzie się ślub: ${weddingPlace}\nMiejsce wesela: ${weddingSpot} \n${weddingExtras}
-  \nMiejscowość w której odbędzie się wesele: ${partyPlace}\nMiejsce wesela: ${partySpot} \n${partyExtras}
-  \nDodatkowa wiadomość: ${additionalMessage}\n${additionalExtras}`
+  \nMiejscowość w której odbędzie się wesele: ${partyPlace}\nMiejsce wesela: ${partySpot}\nTolerowana odległość uroczystości od miejsca ślubu: ${partyRange} \n${partyExtras}
+  \nDodatkowa wiadomość: \n${additionalMessage}\n${additionalExtras}`
 
   var mail = {
-    from: `${bride} i ${groom}`,
-    to: 'szpakusik@gmail.com',  //Change to email address that you want to receive messages on
-    subject: `Szczegóły od ${bride} i ${groom}`,
+    from: `${brideFirstName} ${brideLastName} i $${groomFirstName} ${groomLastName}`,
+    to: 'info@msweddingplanner.pl',  //Change to email address that you want to receive messages on
+    subject: `Szczegóły od ${brideFirstName} ${brideLastName} i ${groomFirstName} ${groomLastName}`,
     text: content,
   }
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {
+      console.log(err)
       res.json({
         msg: 'fail'
       })
@@ -105,7 +120,7 @@ router.post('/send3', (req, res, next) => {
 
   var mail = {
     from: `${name}`,
-    to: 'szpakusik@gmail.com',  //Change to email address that you want to receive messages on
+    to: 'info@msweddingplanner.pl',  //Change to email address that you want to receive messages on
     subject: `Wiadomość z formularza od ${name}`,
     text: content,
   }

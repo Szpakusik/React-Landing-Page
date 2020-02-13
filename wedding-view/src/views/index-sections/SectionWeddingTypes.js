@@ -29,7 +29,7 @@ return(
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img
                         alt="..."
-                        src={require("assets/img/cywilny2.png")}
+                        src={require("assets/img/cywilny3.jpg")}
                       />
                     </a>
                   </div>
@@ -54,7 +54,7 @@ return(
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img
                         alt="..."
-                        src={require("assets/img/konkoradowy.png")}
+                        src={require("assets/img/konkoradowy2.jpg")}
                       />
                     </a>
                   </div>
@@ -79,7 +79,7 @@ return(
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img
                         alt="..."
-                        src={require("assets/img/wyznaniowy2.png")}
+                        src={require("assets/img/wyznaniowy3.jpg")}
                       />
                     </a>
                   </div>
@@ -134,7 +134,7 @@ return(
                             <a href="#pablo" onClick={e => e.preventDefault()}>
                             <img
                                 alt="..."
-                                src={require("assets/img/humanistyczny.png")}
+                                src={require("assets/img/humanistyczny.jpg")}
                             />
                             </a>
                         </div>
@@ -193,7 +193,7 @@ return(
                   <div className="description">
                     <h4 className="info-title mt-0 font-weight-normal pb-2">Droga do ślubu</h4>
                     <p className='font-weight-normal'>
-                    Zastanawialiście się już czym pojechać do ślubu? Coś klasycznego i eleganckiego? A może sportowe auto? Zasugeruję sprawdzone firmy, z ofertą jakiej szukacie!
+                      Zastanawialiście się już czym pojechać do ślubu? Coś klasycznego i eleganckiego? A może sportowe auto? Zasugeruję sprawdzone firmy, z ofertą jakiej szukacie!
                     </p>
                   </div>
                 </div>

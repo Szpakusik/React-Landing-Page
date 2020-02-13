@@ -41,7 +41,7 @@ const items = [
     caption: "w Zameczku"
   },
   {
-    src: require("assets/img/plener.jpg"),
+    src: require("assets/img/plener2.jpg"),
     altText: "Plener Wedding",
     caption: "w Plenerze"
   },

@@ -33,7 +33,7 @@ import {
 import { detectMob } from 'assets/js/main.js'
 
 
-let logoWidth = window.innerWidth < 960 ? '270px' : '335px'; 
+let logoWidth = window.innerWidth < 960 ? '205px' : '254px'; 
 
 
 function IndexNavbar({exeScroll,myRefe}) {
@@ -85,7 +85,7 @@ function IndexNavbar({exeScroll,myRefe}) {
       <a href="/">
            <div className="logo-container">
                 <div className="logo border-0 rounded-0" style={{width:logoWidth, paddingBottom:'5px'}}>
-                    <img src={require("assets/img/LOGO2.png")} alt="Magda Stachurska Logo" style={{width:logoWidth}} />
+                    <img src={require("assets/img/LOGO3.png")} alt="Magda Stachurska Logo" style={{width:logoWidth}} />
                 </div>
 
             </div>

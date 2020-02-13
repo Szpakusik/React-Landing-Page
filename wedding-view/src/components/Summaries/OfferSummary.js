@@ -47,7 +47,7 @@ let OfferSummary = () => {
             <Row style={ secRowStyle } className="border-bottom pt-5 pb-5">
                 <Col lg="4" className="text-center" style={ minHeight }>
                     <Card className="m-3 inherit2 rounded-0 mt-4">
-                        <CardImg className="rounded-0" top src={require("assets/img/wholewedd.jpg")} alt="Card image cap p-2" />
+                        <CardImg className="rounded-0" top src={require("assets/img/wholewedd2.jpg")} alt="Card image cap p-2" />
                         <CardBody >
                             <CardTitle className="text-white h5 font-weight-bold">Kompleksowa organizacja ślubu i wesela</CardTitle>
                             <CardText className="text-white">Zaplanuję wszystkie elementy związane z uroczystością oraz zapewnię wszystkich usługodawców</CardText>
@@ -56,7 +56,7 @@ let OfferSummary = () => {
                 </Col>
                 <Col lg="4" className="text-center" style={ minHeight }>
                     <Card className="m-3 inherit2 rounded-0 mt-4">
-                        <CardImg className="rounded-0" top src={require("assets/img/mixedlang2.jpg")} alt="Card image cap" />
+                        <CardImg className="rounded-0" top src={require("assets/img/mixedlang3.jpg")} alt="Card image cap" />
                         <CardBody>
                             <CardTitle className="text-white h5 font-weight-bold">Częściowa organizacja dnia ślubu i wesela</CardTitle>
                             <CardText className="text-white my-auto">Uzupełnię waszą listę usługodawców</CardText>
@@ -65,7 +65,7 @@ let OfferSummary = () => {
                 </Col>
                 <Col lg="4" className="text-center" style={ minHeight }>
                     <Card className="m-3 inherit2 rounded-0 mt-4">
-                        <CardImg className="rounded-0" top src={require("assets/img/lateness2.jpg")} alt="Card image cap" />
+                        <CardImg className="rounded-0" top src={require("assets/img/lateness3.jpg")} alt="Card image cap" />
                         <CardBody>
                             <CardTitle className="text-white h5 font-weight-bold">Koordynacja dnia ślubu i wesela</CardTitle>
                             <CardText className="text-white">Zadbam o każdy szczegół w tym ważnym dla was dniu. Zgram wszystkich podwykonawców i zaopiekuję sie wami.</CardText>

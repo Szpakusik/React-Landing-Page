@@ -78,7 +78,7 @@ function Services() {
               <p className="title font-weight-normal py-4 w-75 mx-auto h2" style={h2Style}>Oferta</p>
               <Col md="5" className='text-left px-0'>
                 <img style={{width: "100%", left:'0', marginTop:'-24px', border:'2px solid #e3bab3', borderLeft:'0', borderTop:'0'}} className="img-responsive"
-                 alt="Magdalena Stachurska" src={require("assets/img/eyeC3.jpg")} />
+                 alt="Magdalena Stachurska" src={require("assets/img/eyeC4.jpg")} />
               </Col>
 
                 <Col lg="7" sm="12" className="my-auto px-5 text-center" style={{paddingBottom:'30px'}} >   

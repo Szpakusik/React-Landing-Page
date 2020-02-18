@@ -83,7 +83,7 @@ function IndexNavbar({exeScroll,myRefe}) {
     <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
       <Container>
       <a href="/">
-           <div className="logo-container">
+           <div className="logo-container ml-2">
                 <div className="logo border-0 rounded-0" style={{width:logoWidth, paddingBottom:'5px'}}>
                     <img src={require("assets/img/LOGO3.png")} alt="Magda Stachurska Logo" style={{width:logoWidth}} />
                 </div>
@@ -100,6 +100,7 @@ function IndexNavbar({exeScroll,myRefe}) {
           {/* <img src={require("assets/img/LOGO1.png")} alt="" className="img-responsive navbar-logo"/> */}
           </NavbarBrand>
           <button
+            style={{ padding: '0px', paddingRight: '20px' }}
             aria-expanded={navbarCollapse}
             className={classnames("navbar-toggler navbar-toggler", {
               toggled: navbarCollapse

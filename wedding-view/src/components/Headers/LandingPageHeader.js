@@ -44,7 +44,7 @@ function LandingPageHeader({exeScroll,myRefe}) {
 
             <h2>Magdalena Stachurska Wedding Planner</h2>
             
-            <h3>Uczynię ten dzień, najlepszym w waszym zyciu!</h3>
+            <h3>Uczynię ten dzień, najlepszym w Waszym Życiu!</h3>
             <br />
             <Button
               className="btn-round mr-1 mt-3 "

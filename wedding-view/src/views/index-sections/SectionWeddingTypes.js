@@ -110,7 +110,7 @@ return(
                             <a href="#pablo" onClick={e => e.preventDefault()}>
                             <img
                                 alt="..."
-                                src={require("assets/img/plenerk.png")}
+                                src={require("assets/img/plener2.jpg")}
                             />
                             </a>
                         </div>

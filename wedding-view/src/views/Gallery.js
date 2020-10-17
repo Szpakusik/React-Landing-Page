@@ -83,7 +83,7 @@ function Services() {
 
               <p className="title font-weight-normal py-4 w-75 mx-auto h2" style={h2Style}>Galeria</p>
               <Col lg="7" sm="12" className="mx-auto text-center thrd-colour" style={{paddingBottom:'30px'}} > 
-                <p className="h3 font-weight-bold"> Wesele Pauliny i Tomka </p>
+                <p className="h3 font-weight-bold text-dark"> Wesele Pauliny i Tomka </p>
               </Col>
               <ResponsiveGallery images={images} useLightBox={true} lightBoxAdditionalProps={lightBoxProps}/>
               <Col className="ml-auto text-right" md="8" >
@@ -93,7 +93,7 @@ function Services() {
               </Col>
 
               <Col lg="7" sm="12" className="mx-auto text-center thrd-colour" style={{paddingBottom:'30px'}} > 
-                <p className="h3 font-weight-bold"> Wesele Pauliny i Tomka </p>
+                <p className="h3 font-weight-bold text-dark"> Wesele Pauliny i Tomka </p>
               </Col>
               <ResponsiveGallery images={images} useLightBox={true} lightBoxAdditionalProps={lightBoxProps}/>
 

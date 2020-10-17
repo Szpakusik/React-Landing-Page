@@ -54,8 +54,6 @@ function IndexNavbar({exeScroll,myRefe}) {
     document.documentElement.classList.toggle("nav-open");
   };
 
-  
-
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
@@ -70,8 +68,6 @@ function IndexNavbar({exeScroll,myRefe}) {
         setNavbarColor("navbar-transparent");
       }
     };
-
-    
 
     window.addEventListener("scroll", updateNavbarColor);
 
@@ -90,7 +86,7 @@ function IndexNavbar({exeScroll,myRefe}) {
 
             </div>
       </a>
-        <div className="navbar-translate" style={{ width: '19%' }}>
+        <div className="navbar-translate" style={{ width: '14%' }}>
           <NavbarBrand
             data-placement="bottom"
             href="/"
@@ -139,6 +135,17 @@ function IndexNavbar({exeScroll,myRefe}) {
               >
                 <i className="fa fa-heart"></i>
                 <p className="">Oferta</p>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                data-placement="bottom"
+                href="/gallery"
+                target="_self"
+                title="Zobacz moje wesela!"
+              >
+                <i className="fa fa-image"></i>
+                <p className="">Galeria</p>
               </NavLink>
             </NavItem>
             <NavItem onClick={handleClick}>

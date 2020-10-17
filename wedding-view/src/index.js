@@ -33,6 +33,7 @@ import NucleoIcons from "views/NucleoIcons.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
+import Gallery from "views/Gallery";
 // others
 
 
@@ -45,6 +46,8 @@ ReactDOM.render(
       <Route path="/oferta" render={props => <Services {...props} />} />
 
       <Route path="/o-mnie" render={props => <AboutMe {...props} />} />
+
+      <Route path="/gallery" render={props => <Gallery {...props} />} />
 
       <Route
         path="/nucleo-icons"

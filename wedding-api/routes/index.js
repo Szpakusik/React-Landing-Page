@@ -52,6 +52,7 @@ router.post('/send', (req, res, next) => {
     subject: `Podstawowe informacje od ${brideFirstName} ${brideLastName} i ${groomFirstName} ${groomLastName} `,
     text: content,
   }
+  console.log(mail);
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {
@@ -95,6 +96,7 @@ router.post('/send2', (req, res, next) => {
     subject: `Szczegóły od ${brideFirstName} ${brideLastName} i ${groomFirstName} ${groomLastName}`,
     text: content,
   }
+  console.log(mail)
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {
@@ -124,6 +126,7 @@ router.post('/send3', (req, res, next) => {
     subject: `Wiadomość z formularza od ${name}`,
     text: content,
   }
+  console.log(mail)
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {

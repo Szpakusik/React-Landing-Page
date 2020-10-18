@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useCallback } from "react";
 import { Row, Col } from "reactstrap";
 import HalfTone from 'assets/img/bgs/halftone.png'
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
@@ -6,7 +6,8 @@ import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import ContactSummary from "components/Summaries/ContactSummary";
 import ContactForm from "components/Summaries/ContactForm";
-import ResponsiveGallery from 'react-responsive-gallery';
+import Carousel, { Modal, ModalGateway } from "react-images";
+import Gallery from "react-photo-gallery";
 
 var h2Style = {
   backgroundImage: "url(" + HalfTone + ")",
@@ -20,61 +21,57 @@ var galleryStyle = {
   maxWidth: '100vw'
 };
 
-const lightBoxProps = {
-  enableZoom: false,
-  reactModalStyle:{
-    content:{
-      top: "85px"
-    }
-  }
-}
 
-function Services() {
-  document.documentElement.classList.remove("nav-open");
-  React.useEffect(() => {
-    document.body.classList.add("landing-page");
-    return function cleanup() {
-      document.body.classList.remove("landing-page");
-    };
-  });
+
+function GalleryView() {
+
+  const [currentImage, setCurrentImage] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+  const openLightbox = useCallback((event, { photo, index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  }, []);
+
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
 
   const myRef = useRef(null)
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
   const images=[
-    {
-      src: 'https://cdn.pixabay.com/photo/2017/01/14/12/59/iceland-1979445_960_720.jpg'
-    },
-    {
-      src: 'https://cdn.pixabay.com/photo/2019/06/12/15/07/cat-4269479_960_720.jpg'
-    },
-    {
-      src: 'https://cdn.pixabay.com/photo/2016/12/04/21/58/rabbit-1882699_960_720.jpg'
-    },
-    {
-      src: 'https://cdn.pixabay.com/photo/2014/07/08/12/36/bird-386725_960_720.jpg'
-    },
-    {
-      src: 'https://cdn.pixabay.com/photo/2015/10/12/15/46/fallow-deer-984573_960_720.jpg'
-    },
-    {
-      src: 'https://cdn.pixabay.com/photo/2014/10/01/10/44/hedgehog-468228_960_720.jpg'
-    },
-    {
-      src: 'https://cdn.pixabay.com/photo/2013/09/22/15/29/prairie-dog-184974_960_720.jpg'
-    },
-    {
-      src: 'https://cdn.pixabay.com/photo/2018/03/31/06/31/dog-3277416_960_720.jpg'
-    },
-    {
-      src: 'https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_960_720.jpg'
-    },
-    {
-      src: 'https://cdn.pixabay.com/photo/2019/03/09/17/30/horse-4044547_960_720.jpg'
-    }
+    { src: require('../assets/img/om1.jpg'), width: 3, height: 2},
+    { src: require('../assets/img/om2.jpg'), width: 3, height: 2 },
+    { src: require('../assets/img/om3.jpg'), width: 3, height: 2 },
+    { src: require('../assets/img/om4.jpg'), width: 3, height: 2 },
+    { src: require('../assets/img/om5.jpg'), width: 3, height: 2 },
+    { src: require('../assets/img/om6.jpg'), width: 3, height: 2 },
+    { src: require('../assets/img/om7.jpg'), width: 3, height: 2 },
+    { src: require('../assets/img/om8.jpg'), width: 3, height: 2 },
+    { src: require('../assets/img/om9.jpg'), width: 3, height: 2 },
+    { src: require('../assets/img/om10.jpg'), width: 3, height: 2 },
+    { src: require('../assets/img/om11.jpg'), width: 3, height: 2 },
+    { src: require('../assets/img/om12.jpg'), width: 3, height: 2 }
   ];
+  
   return (
     <>
+      <ModalGateway>
+        {viewerIsOpen ? (
+          <Modal onClose={closeLightbox}>
+            <Carousel
+              currentIndex={currentImage}
+              views={images.map(x => ({
+                ...x,
+                srcset: x.srcSet,
+                caption: x.title
+              }))}
+            />
+          </Modal>
+        ) : null}
+      </ModalGateway>
       <IndexNavbar exeScroll={scrollToRef} myRefe={myRef} />
       <ProfilePageHeader />
       <div className="section profile-content sec-colour text-center pb-0">
@@ -85,17 +82,14 @@ function Services() {
               <Col lg="7" sm="12" className="mx-auto text-center thrd-colour" style={{paddingBottom:'30px'}} > 
                 <p className="h3 font-weight-bold text-dark"> Wesele Pauliny i Tomka </p>
               </Col>
-              <ResponsiveGallery images={images} useLightBox={true} lightBoxAdditionalProps={lightBoxProps}/>
+              <Row className="px-5">
+                <Gallery photos={images} onClick={openLightbox}/>
+              </Row>
               <Col className="ml-auto text-right" md="8" >
                 <p className="font-weight-bold text-dark">
                 	Fot. Andrzej Piast
                 </p>
               </Col>
-
-              <Col lg="7" sm="12" className="mx-auto text-center thrd-colour" style={{paddingBottom:'30px'}} > 
-                <p className="h3 font-weight-bold text-dark"> Wesele Pauliny i Tomka </p>
-              </Col>
-              <ResponsiveGallery images={images} useLightBox={true} lightBoxAdditionalProps={lightBoxProps}/>
 
             </Row>
     
@@ -108,4 +102,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default GalleryView;

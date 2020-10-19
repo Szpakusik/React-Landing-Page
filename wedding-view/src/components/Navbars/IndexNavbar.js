@@ -34,7 +34,7 @@ import { detectMob } from 'assets/js/main.js'
 
 
 let logoWidth = window.innerWidth < 960 ? '205px' : '254px'; 
-
+let isMobile = window.innerWidth < 600;
 
 function IndexNavbar({exeScroll,myRefe}) {
   let handleClick;
@@ -86,7 +86,7 @@ function IndexNavbar({exeScroll,myRefe}) {
 
             </div>
       </a>
-        <div className="navbar-translate" style={{ width: '14%' }}>
+        <div className="navbar-translate" style={isMobile ? { width: '19%' } : { width: '14%' }}>
           <NavbarBrand
             data-placement="bottom"
             href="/"

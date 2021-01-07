@@ -80,14 +80,14 @@ function GalleryView() {
 
               <p className="title font-weight-normal py-4 w-75 mx-auto h2" style={h2Style}>Galeria</p>
               <Col lg="7" sm="12" className="mx-auto text-center thrd-colour" style={{paddingBottom:'30px'}} > 
-                <p className="h3 font-weight-bold text-dark"> Wesele Pauliny i Tomka </p>
+                <p className="h3 font-weight-bold text-dark"> Wesele Oli i Mateusza </p>
               </Col>
               <Row className="px-5">
                 <Gallery photos={images} onClick={openLightbox}/>
               </Row>
               <Col className="ml-auto text-right" md="8" >
                 <p className="font-weight-bold text-dark">
-                	Fot. Andrzej Piast
+                	Fot. Piotr Gardyła
                 </p>
               </Col>
 

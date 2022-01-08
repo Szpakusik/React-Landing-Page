@@ -69,7 +69,6 @@ router.post('/send', (req, res, next) => {
 // Advanced info from extended form
 router.post('/send2', (req, res, next) => {
 
-  console.log('HUJEC');
   const brideFirstName = req.body.brideFirstName;
   const brideLastName = req.body.brideLastName;
   const groomFirstName = req.body.groomFirstName;

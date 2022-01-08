@@ -42,9 +42,8 @@ function LandingPageHeader({exeScroll,myRefe}) {
         <Container>
           <div className="motto text-center inherit2" style={{marginTop:"135px", marginBottom:"115px",}}>
 
-            <h2>Magdalena Stachurska Wedding Planner</h2>
-            
-            <h3>Uczynię ten dzień, najlepszym w Waszym Życiu!</h3>
+            <h2>Ogarniacze Ślubów Magdalena Stachurska</h2>
+            <h3>Ogarnę Wasz ślub i wesele</h3>
             <br />
             <Button
               className="btn-round mr-1 mt-3 "
@@ -55,7 +54,7 @@ function LandingPageHeader({exeScroll,myRefe}) {
               style={{textTransform: 'none', letterSpacing: '2px'}}
             >
               <i class="fa fa-chevron-circle-down"></i>
-              Kim jestem?
+              W czym mogę Wam pomóc?
             </Button>
           </div>
         </Container>

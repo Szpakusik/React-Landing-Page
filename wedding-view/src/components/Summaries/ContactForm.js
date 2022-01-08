@@ -49,8 +49,8 @@ class ContactSummary extends React.Component{
             <>
                 <div className="container">
                     <Row>
-                        <p className="h5 p-3 m-3 font-weight-normal text-center mx-auto">
-                            Napisz do mnie przez formularz, lub od razu zamów <a href="formularz" className="font-weight-normal" style={{color:"#66615b", textDecoration:"underline"}}>darmową wycenę</a>!
+                        <p className="h5 p-3 m-3 font-weight-normal text-center mx-auto px-5">
+                        Napiszcie do mnie przez formularz lub wypełnijcie <a href="formularz" className="font-weight-normal" style={{color:"#66615b", textDecoration:"underline"}}>darmową wycenę</a>, a ja przygotuję dla Was spersonalizowaną ofertę!
                         </p>
                         <form className="w-100 mx-auto mb-5 text-center p-4 col-md-10" id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                             <Row>
@@ -70,6 +70,9 @@ class ContactSummary extends React.Component{
                                 <label for="message">Wiadomość</label>
                                 <textarea className="form-control uneditable-input text-center" rows="5" id="message"></textarea>
                             </div>
+
+                            <p className='text-right'><a href='#' style={{color:"#66615b", textDecoration:"underline"}}>Polityka prywatności</a></p>
+
                             <button type="submit" className="btn btn-round px-5 sec-colour-bg">Wyślij</button>
                         </form>
                     </Row>

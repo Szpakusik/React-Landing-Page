@@ -78,7 +78,7 @@ function GalleryView() {
 
             <Row className="section pt-0 mt-0 pb-0 mx-auto"  style={galleryStyle}>
 
-              <p className="title font-weight-normal py-4 w-75 mx-auto h2" style={h2Style}>Galeria</p>
+              <p className="title font-weight-normal py-4 w-75 mx-auto h2" style={h2Style}>Portfolio</p>
               <Col lg="7" sm="12" className="mx-auto text-center thrd-colour" style={{paddingBottom:'30px'}} > 
                 <p className="h3 font-weight-bold text-dark"> Wesele Oli i Mateusza </p>
               </Col>

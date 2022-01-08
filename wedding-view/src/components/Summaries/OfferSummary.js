@@ -3,27 +3,19 @@ import { Row, Col, Card, CardImg, CardText, CardBody,
     CardTitle, Button } from 'reactstrap';
 import Background from 'assets/img/secbg3.jpg';
 
-// Container.propTypes = {
-//     fluid:  true
-//     // applies .container-fluid class
-// }
 let displayShowMore;
 let bundleDescription;
+
 if(window.location.pathname !== "/oferta"){
     displayShowMore = "flex";
-    bundleDescription = `Każdą parę traktuję indywidualnie. Sprawdź mój szeroki wachlarz usług i wybierz coś dla siebie!`;
+    bundleDescription = `Każdą parę traktuję indywidualnie. Zapytajcie o szczegóły i wybierzcie coś dla siebie!`;
 }
 
 else{
     displayShowMore = "none";
-    bundleDescription = "Oczywiście możesz zmodyfikować ofertę dla siebie. Sprawdź poniżej, opcje personalizacji";
+    bundleDescription = "Każdą parę traktuję indywidualnie. Zapytajcie o szczegóły i wybierzcie coś dla siebie!";
 }
     
-
-console.log(window.location.pathname);
-
-
-
 const minHeight = {
     display: 'flex',
     flexdirection: 'column'
@@ -51,6 +43,7 @@ let OfferSummary = () => {
                         <CardBody >
                             <CardTitle className="text-white h5 font-weight-bold">Kompleksowa organizacja ślubu i wesela</CardTitle>
                             <CardText className="text-white">Zaplanuję wszystkie elementy związane z uroczystością oraz zapewnię wszystkich usługodawców</CardText>
+                            <CardText className="text-white my-auto font-weight-bold">od 9 % kosztów ślubu i wesela</CardText>
                         </CardBody>
                     </Card>            
                 </Col>
@@ -60,6 +53,8 @@ let OfferSummary = () => {
                         <CardBody>
                             <CardTitle className="text-white h5 font-weight-bold">Częściowa organizacja dnia ślubu i wesela</CardTitle>
                             <CardText className="text-white my-auto">Uzupełnię waszą listę usługodawców</CardText>
+                            <br/>
+                            <CardText className="text-white my-auto font-weight-bold">od 8 % kosztów usług</CardText>
                         </CardBody>
                     </Card>            
                 </Col>
@@ -69,6 +64,7 @@ let OfferSummary = () => {
                         <CardBody>
                             <CardTitle className="text-white h5 font-weight-bold">Koordynacja dnia ślubu i wesela</CardTitle>
                             <CardText className="text-white">Zadbam o każdy szczegół w tym ważnym dla was dniu. Zgram wszystkich podwykonawców i zaopiekuję sie wami.</CardText>
+                            <CardText className="text-white my-auto font-weight-bold">od 1500 zł</CardText>
                         </CardBody>
                     </Card>            
                 </Col>

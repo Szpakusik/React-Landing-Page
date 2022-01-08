@@ -87,7 +87,6 @@ function SectionCarousel() {
       item.classList.add('h2');
       item.classList.add('font-weight-bold');
     } )
-    console.log(carouselCaptions);
   });
 
 

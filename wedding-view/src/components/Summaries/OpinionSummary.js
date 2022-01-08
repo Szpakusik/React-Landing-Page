@@ -36,7 +36,7 @@ let OpinionSummary = () => {
                                 <p className="mt-0 font-weight-normal">{bundleDescription2}</p>
                                 <p className="h5 text-right thrd-colour font-weight-normal">~Ola i Mateusz</p>
                                 <a href='/gallery' className={`btn bg-white text-dark mx-auto mt-3 w-50 text-center d-${displayShowMore}`}>
-                                    <p className="mx-auto mb-0 font-weight-bold">Galeria</p>
+                                    <p className="mx-auto mb-0 font-weight-bold">Portfolio</p>
                                 </a>
                             </div>
                         </Col>

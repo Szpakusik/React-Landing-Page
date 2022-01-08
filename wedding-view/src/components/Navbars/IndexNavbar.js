@@ -145,7 +145,7 @@ function IndexNavbar({exeScroll,myRefe}) {
                 title="Zobacz moje wesela!"
               >
                 <i className="fa fa-image"></i>
-                <p className="">Galeria</p>
+                <p className="">Portfolio</p>
               </NavLink>
             </NavItem>
             <NavItem onClick={handleClick}>

@@ -7,15 +7,15 @@ let AboutMeSummary = (props) => {
       <div ref={props.refProp} className="section-dark border-top">
         <div className="container-fluid">
           <Row>
-            <Col lg="5" sm="12" className="px-0">
+            <Col lg="4" sm="12" className="px-0">
               <img
                 style={{ width: "100%" }}
                 className="img-responsive border-right"
                 alt="Magdalena Stachurska"
-                src={require("assets/img/summabout2.jpg")}
+                src={require("assets/img/MS5-min.jpg")}
               />
             </Col>
-            <Col lg="7" sm="12" className="my-auto px-5">
+            <Col lg="8" sm="12" className="my-auto px-5">
               <p className="h2 text-center pb-4 text-light">
                 <bold>W czym mogę Wam pomóc?</bold>
               </p>

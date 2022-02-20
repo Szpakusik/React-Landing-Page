@@ -60,7 +60,7 @@ function Services() {
               }}
               className="img-responsive"
               alt="Magdalena Stachurska"
-              src={require("assets/img/eyeC4.jpg")}
+              src={require("assets/img/MS11-min.jpg")}
             />
           </Col>
 

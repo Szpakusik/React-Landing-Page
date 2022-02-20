@@ -9,6 +9,11 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Kimberlie';
+	src: local('Kimberlie'), url("../fonts/Kimberlie-Regular.otf") format('otf');
+}
+
 [class^="ti-"], [class*=" ti-"] {
 	font-family: 'themify';
 	speak: none;

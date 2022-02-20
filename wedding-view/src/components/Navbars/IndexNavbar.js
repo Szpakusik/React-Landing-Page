@@ -1,25 +1,5 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
-// nodejs library that concatenates strings
 import classnames from "classnames";
-// reactstrap components
 import {
   Button,
   Collapse,
@@ -28,26 +8,26 @@ import {
   NavItem,
   NavLink,
   Nav,
-  Container
+  Container,
 } from "reactstrap";
-import { detectMob } from 'assets/js/main.js'
 
-
-let logoWidth = window.innerWidth < 960 ? '205px' : '254px'; 
+let logoWidth = window.innerWidth < 960 ? "205px" : "254px";
 let isMobile = window.innerWidth < 600;
 
-function IndexNavbar({exeScroll,myRefe}) {
+function IndexNavbar({ exeScroll, myRefe }) {
   let handleClick;
-  if( window.location.pathname=="/formularz"){
-    handleClick = (e)=>{
-      window.location.pathname="/"
-    }
-  } 
-  else
-    handleClick = (e)=>{ exeScroll(myRefe) }
+  if (window.location.pathname == "/formularz") {
+    handleClick = (e) => {
+      window.location.pathname = "/";
+    };
+  } else
+    handleClick = (e) => {
+      exeScroll(myRefe);
+    };
 
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
+  const [showLogo, setShowLogo] = React.useState(false);
 
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
@@ -61,11 +41,13 @@ function IndexNavbar({exeScroll,myRefe}) {
         document.body.scrollTop > 49
       ) {
         setNavbarColor("");
+        setShowLogo(true);
       } else if (
         document.documentElement.scrollTop < 50 ||
         document.body.scrollTop < 50
       ) {
         setNavbarColor("navbar-transparent");
+        setShowLogo(false);
       }
     };
 
@@ -78,28 +60,41 @@ function IndexNavbar({exeScroll,myRefe}) {
   return (
     <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
       <Container>
-      <a href="/">
-           <div className="logo-container ml-2">
-                <div className="logo border-0 rounded-0" style={{width:logoWidth, paddingBottom:'5px'}}>
-                    <img src={require("assets/img/LOGO3.png")} alt="Magda Stachurska Logo" style={{width:logoWidth}} />
-                </div>
-
+        <a href="/">
+          <div className="logo-container ml-2">
+            <div
+              className={"logo border-0 rounded-0 "}
+              style={{
+                width: logoWidth,
+                paddingBottom: "5px",
+                display: showLogo ? "block" : "none",
+              }}
+            >
+              <img
+                src={require("assets/img/logoos.png")}
+                alt="Magda Stachurska Logo"
+                style={{ width: logoWidth }}
+              />
             </div>
-      </a>
-        <div className="navbar-translate" style={isMobile ? { width: '19%' } : { width: '14%' }}>
+          </div>
+        </a>
+        <div
+          className="navbar-translate"
+          style={isMobile ? { width: "19%" } : { width: "5%" }}
+        >
           <NavbarBrand
             data-placement="bottom"
             href="/"
             target="_blank"
             title="Coded by Creative Tim"
           >
-          {/* <img src={require("assets/img/LOGO1.png")} alt="" className="img-responsive navbar-logo"/> */}
+            {/* <img src={require("assets/img/LOGO1.png")} alt="" className="img-responsive navbar-logo"/> */}
           </NavbarBrand>
           <button
-            style={{ padding: '0px', paddingRight: '20px' }}
+            style={{ padding: "0px", paddingRight: "20px" }}
             aria-expanded={navbarCollapse}
             className={classnames("navbar-toggler navbar-toggler", {
-              toggled: navbarCollapse
+              toggled: navbarCollapse,
             })}
             onClick={toggleNavbarCollapse}
           >
@@ -114,7 +109,6 @@ function IndexNavbar({exeScroll,myRefe}) {
           isOpen={navbarCollapse}
         >
           <Nav navbar>
-          
             <NavItem>
               <NavLink
                 data-placement="bottom"
@@ -171,12 +165,23 @@ function IndexNavbar({exeScroll,myRefe}) {
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.instagram.com/ms.weddingplanner/?hl=pl"
+                href="https://www.instagram.com/ogarniacze_slubow/?hl=pl"
                 target="_blank"
                 title="Śledź nas na Instagramie"
               >
                 <i className="fa fa-instagram" />
                 <p className="d-lg-none">Instagram</p>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                data-placement="bottom"
+                href="https://www.facebook.com/ogarniaczeslubow"
+                target="_blank"
+                title="Śledź nas na Facebooku"
+              >
+                <i className="fa fa-facebook-square" />
+                <p className="d-lg-none">Facebook</p>
               </NavLink>
             </NavItem>
           </Nav>

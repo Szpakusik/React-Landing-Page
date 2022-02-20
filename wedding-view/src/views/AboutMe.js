@@ -1,29 +1,9 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React, { useRef } from "react";
 
-// reactstrap components
 import { Row, Col } from "reactstrap";
 
 import HalfTone from "assets/img/bgs/halftone.png";
 
-// core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
@@ -56,7 +36,7 @@ function AboutMe() {
             <img
               alt="..."
               className="img-circle img-no-padding border img-responsive"
-              src={require("assets/img/profile.png")}
+              src={require("assets/img/ms1-square.jpg")}
             />
           </div>
           <div className="name">
@@ -101,15 +81,15 @@ function AboutMe() {
             <img
               alt="Magdalena Stachursa Planowanie wesel"
               className="img-no-padding border img-responsive"
-              src={require("assets/img/best.jpg")}
+              src={require("assets/img/MS4-min.jpg")}
               style={{ width: "100%" }}
             />
           </Col>
         </Row>
         <Row className="w-100 mx-auto px-5 text-center">
-          <p className="h2 w-100 text-center sec-colour font-weight-normal mb-5">
+          {/* <p className="h2 w-100 text-center sec-colour font-weight-normal mb-5">
             TO BE CHANGED - MAP gdzie działam?
-          </p>
+          </p> */}
         </Row>
         <Row
           className="w-100 mx-auto mt-5 overflow-hidden"

@@ -1,4 +1,7 @@
 module.exports = {
-    USER: '***', 
-    PASS: '***'
-}
+  USER: "***",
+  PASS: "***",
+  CLIENT_ID: "***",
+  clientSecret: "***",
+  refreshToken: "***",
+};

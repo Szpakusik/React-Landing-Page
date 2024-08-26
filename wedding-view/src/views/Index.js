@@ -16,7 +16,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 // reactstrap components
 
@@ -29,8 +29,17 @@ import OfferSummary from "components/Summaries/OfferSummary";
 import ContactSummary from "components/Summaries/ContactSummary";
 import OpinionSummary from "components/Summaries/OpinionSummary";
 import ContactForm from "components/Summaries/ContactForm";
+import CookieConsent from "components/CookieConsent";
 
 function Index() {
+  const initialConsent = localStorage.getItem('cookieConsent');
+
+  const [isCookieAccepted, setIsCookieAccepted] = useState(initialConsent == "true")
+
+  const handleCookieAccept = () => {
+    localStorage.setItem('cookieConsent', "true");
+    setIsCookieAccepted(true)
+  }
 
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
@@ -48,8 +57,8 @@ function Index() {
     <>
       <IndexNavbar exeScroll={scrollToRef} myRefe={contactRef}/>
       <IndexHeader exeScroll={scrollToRef} myRefe={aboutRef}/>
-      <div className="main"> 
-      
+      <div className="main">
+
         <AboutMeSummary refProp={aboutRef}/>
         <OfferSummary />
         <OpinionSummary />
@@ -57,6 +66,7 @@ function Index() {
         <ContactForm />
         <DemoFooter />
       </div>
+      {!isCookieAccepted && <CookieConsent setIsCookieAccepted={handleCookieAccept} />}
     </>
   );
 }

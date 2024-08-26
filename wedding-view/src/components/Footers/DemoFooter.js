@@ -52,10 +52,22 @@ function DemoFooter() {
               </li>
             </ul> */}
           </nav>
+          <div className="credits mr-auto">
+            <span className="copyright">
+              <a
+                href="/polityka-prywatnosci.docx"
+                target="_blank"
+                style={{ color: "#A49E9E", textDecoration: "underline" }}
+              >
+                Polityka prywatności
+              </a>
+            </span>
+          </div>
           <div className="credits ml-auto">
             <span className="copyright">
               © {new Date().getFullYear()}, made with{" "}
-              <i className="fa fa-heart heart sec-colour" /> by Norbert Szpakowski
+              <i className="fa fa-heart heart sec-colour" /> by Norbert
+              Szpakowski
             </span>
           </div>
         </Row>

@@ -49,14 +49,19 @@ function AboutMe() {
         </div>
 
         <br />
-        <Row className="w-100 mx-auto my-5">
+        <Row className="w-100 mx-auto my-5 pt-5 pt-lg-1">
           <Col
             md="7"
             className="my-auto text-center border-left border-top border-bottom ml-sm-5  prim-colour-bg p-4"
           >
-            <div className="info sec-colour h4" style={{ marginTop: "-110px" }}>
+            <div className="info sec-colour h4 pt-3" style={{ marginTop: "-180px" }}>
               <div className="icon ">
-                <i className="nc-icon nc-favourite-28" />
+                <img
+                  src={require("assets/img/logomsblack.png")}
+                  alt="Magda Stachurska Logo"
+                  style={{ width: "100px" }}
+                  className={"mb-3"}
+                />
               </div>
               <div className="description">
                 <p className="info-title sec-colour"></p>

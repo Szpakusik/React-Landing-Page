@@ -7,7 +7,7 @@ import GrayJean from "assets/img/bgs/gray_jean.png";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
-import OfferSummary from "components/Summaries/OfferSummary";
+import OfferSummary2 from "components/Summaries/OfferSummary2";
 import SectionCarousel from "views/index-sections/SectionCarousel";
 import SectionWeddingTypes from "views/index-sections/SectionWeddingTypes";
 import ContactSummary from "components/Summaries/ContactSummary";
@@ -101,8 +101,8 @@ function Services() {
           </Col>
         </Row>
       </div>
-      <OfferSummary />
-      <SectionWeddingTypes />
+      <OfferSummary2 />
+      {/* <SectionWeddingTypes /> */}
       <SectionCarousel />
       <ContactSummary refProp={myRef} />
       <ContactForm />
